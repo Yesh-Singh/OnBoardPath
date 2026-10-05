@@ -1,0 +1,781 @@
+task_id,employee_role,department,day,task,tool,resource,priority,responsible_person,estimated_minutes,prerequisite,status
+AIM0001,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,35,,Pending
+AIM0002,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,32,,Pending
+AIM0003,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,18,,Pending
+AIM0004,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,41,,Pending
+AIM0005,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,66,Complete Day 1 core tasks,Pending
+AIM0006,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,27,Complete Day 1 core tasks,Pending
+AIM0007,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,33,Complete Day 1 core tasks,Pending
+AIM0008,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+AIM0009,Software Engineer,Engineering,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,46,Complete Day 2 core tasks,Pending
+AIM0010,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,53,Complete Day 2 core tasks,Pending
+AIM0011,Software Engineer,Engineering,Day 3,Meet onboarding buddy,VS Code,Buddy Introduction,Medium,Onboarding Buddy,26,Complete Day 2 core tasks,Pending
+AIM0012,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,63,Complete Day 2 core tasks,Pending
+AIM0013,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,29,Complete Day 3 core tasks,Pending
+AIM0014,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,50,Complete Day 3 core tasks,Pending
+AIM0015,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,56,Complete Day 3 core tasks,Pending
+AIM0016,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,40,Complete Day 3 core tasks,Pending
+AIM0017,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0018,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,18,Complete Day 4 core tasks,Pending
+AIM0019,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,VS Code,Weekly Check-in Guide,High,Manager,33,Complete Day 4 core tasks,Pending
+AIM0020,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,12,Complete Day 4 core tasks,Pending
+AIM0021,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,,Pending
+AIM0022,Sales Executive,Sales,Day 1,Set up company email account,Salesforce,IT Setup Guide,High,IT Helpdesk,40,,Pending
+AIM0023,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,16,,Pending
+AIM0024,Sales Executive,Sales,Day 1,Review employee handbook,Salesforce,Employee Handbook,Medium,HR Team,47,,Pending
+AIM0025,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,Salesforce,Role Setup Guide,High,IT Helpdesk,65,Complete Day 1 core tasks,Pending
+AIM0026,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,22,Complete Day 1 core tasks,Pending
+AIM0027,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,40,Complete Day 1 core tasks,Pending
+AIM0028,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,31,Complete Day 1 core tasks,Pending
+AIM0029,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,41,Complete Day 2 core tasks,Pending
+AIM0030,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,44,Complete Day 2 core tasks,Pending
+AIM0031,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,38,Complete Day 2 core tasks,Pending
+AIM0032,Sales Executive,Sales,Day 3,Complete role-specific learning module,Salesforce,Role Learning Guide,Medium,Manager,61,Complete Day 2 core tasks,Pending
+AIM0033,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,35,Complete Day 3 core tasks,Pending
+AIM0034,Sales Executive,Sales,Day 4,Review current team projects,Salesforce,Project Overview,Medium,Team Lead,42,Complete Day 3 core tasks,Pending
+AIM0035,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,67,Complete Day 3 core tasks,Pending
+AIM0036,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,37,Complete Day 3 core tasks,Pending
+AIM0037,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0038,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,27,Complete Day 4 core tasks,Pending
+AIM0039,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,25,Complete Day 4 core tasks,Pending
+AIM0040,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,12,Complete Day 4 core tasks,Pending
+AIM0041,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,35,,Pending
+AIM0042,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,32,,Pending
+AIM0043,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,24,,Pending
+AIM0044,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,50,,Pending
+AIM0045,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,67,Complete Day 1 core tasks,Pending
+AIM0046,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,44,Complete Day 1 core tasks,Pending
+AIM0047,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,40,Complete Day 1 core tasks,Pending
+AIM0048,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,28,Complete Day 1 core tasks,Pending
+AIM0049,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,40,Complete Day 2 core tasks,Pending
+AIM0050,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,43,Complete Day 2 core tasks,Pending
+AIM0051,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,39,Complete Day 2 core tasks,Pending
+AIM0052,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,59,Complete Day 2 core tasks,Pending
+AIM0053,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,33,Complete Day 3 core tasks,Pending
+AIM0054,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,52,Complete Day 3 core tasks,Pending
+AIM0055,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,61,Complete Day 3 core tasks,Pending
+AIM0056,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0057,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0058,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,16,Complete Day 4 core tasks,Pending
+AIM0059,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,36,Complete Day 4 core tasks,Pending
+AIM0060,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,12,Complete Day 4 core tasks,Pending
+AIM0061,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,VS Code,Onboarding Guide,High,HR Team,32,,Pending
+AIM0062,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,36,,Pending
+AIM0063,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,18,,Pending
+AIM0064,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,44,,Pending
+AIM0065,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,70,Complete Day 1 core tasks,Pending
+AIM0066,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0067,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+AIM0068,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,39,Complete Day 1 core tasks,Pending
+AIM0069,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,52,Complete Day 2 core tasks,Pending
+AIM0070,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0071,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,37,Complete Day 2 core tasks,Pending
+AIM0072,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,62,Complete Day 2 core tasks,Pending
+AIM0073,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,VS Code,Documentation Guide,High,Team Lead,32,Complete Day 3 core tasks,Pending
+AIM0074,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,54,Complete Day 3 core tasks,Pending
+AIM0075,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,VS Code,Repository Setup Guide,High,Manager,66,Complete Day 3 core tasks,Pending
+AIM0076,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,29,Complete Day 3 core tasks,Pending
+AIM0077,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0078,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,28,Complete Day 4 core tasks,Pending
+AIM0079,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,35,Complete Day 4 core tasks,Pending
+AIM0080,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0081,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,26,,Pending
+AIM0082,Sales Executive,Sales,Day 1,Set up company email account,Salesforce,IT Setup Guide,High,IT Helpdesk,35,,Pending
+AIM0083,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,27,,Pending
+AIM0084,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,40,,Pending
+AIM0085,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,Salesforce,Role Setup Guide,High,IT Helpdesk,65,Complete Day 1 core tasks,Pending
+AIM0086,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,17,Complete Day 1 core tasks,Pending
+AIM0087,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,37,Complete Day 1 core tasks,Pending
+AIM0088,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,27,Complete Day 1 core tasks,Pending
+AIM0089,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,47,Complete Day 2 core tasks,Pending
+AIM0090,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+AIM0091,Sales Executive,Sales,Day 3,Meet onboarding buddy,Salesforce,Buddy Introduction,Medium,Onboarding Buddy,27,Complete Day 2 core tasks,Pending
+AIM0092,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,70,Complete Day 2 core tasks,Pending
+AIM0093,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,26,Complete Day 3 core tasks,Pending
+AIM0094,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,41,Complete Day 3 core tasks,Pending
+AIM0095,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,62,Complete Day 3 core tasks,Pending
+AIM0096,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,40,Complete Day 3 core tasks,Pending
+AIM0097,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0098,Sales Executive,Sales,Day 5,Review pending access requests,Salesforce,Access Status Guide,Medium,IT Helpdesk,19,Complete Day 4 core tasks,Pending
+AIM0099,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,38,Complete Day 4 core tasks,Pending
+AIM0100,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,17,Complete Day 4 core tasks,Pending
+AIM0101,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,25,,Pending
+AIM0102,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0103,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,,Pending
+AIM0104,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,41,,Pending
+AIM0105,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,58,Complete Day 1 core tasks,Pending
+AIM0106,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,50,Complete Day 1 core tasks,Pending
+AIM0107,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+AIM0108,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,26,Complete Day 1 core tasks,Pending
+AIM0109,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,43,Complete Day 2 core tasks,Pending
+AIM0110,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,40,Complete Day 2 core tasks,Pending
+AIM0111,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,29,Complete Day 2 core tasks,Pending
+AIM0112,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,68,Complete Day 2 core tasks,Pending
+AIM0113,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,28,Complete Day 3 core tasks,Pending
+AIM0114,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,55,Complete Day 3 core tasks,Pending
+AIM0115,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,69,Complete Day 3 core tasks,Pending
+AIM0116,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,29,Complete Day 3 core tasks,Pending
+AIM0117,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,23,Complete Day 4 core tasks,Pending
+AIM0118,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,15,Complete Day 4 core tasks,Pending
+AIM0119,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,27,Complete Day 4 core tasks,Pending
+AIM0120,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,24,Complete Day 4 core tasks,Pending
+AIM0121,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,28,,Pending
+AIM0122,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0123,Software Engineer,Engineering,Day 1,Join company communication channels,VS Code,Communication Guide,High,IT Helpdesk,15,,Pending
+AIM0124,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,52,,Pending
+AIM0125,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,69,Complete Day 1 core tasks,Pending
+AIM0126,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0127,Software Engineer,Engineering,Day 2,Request required application access,VS Code,Access Request Guide,High,IT Helpdesk,25,Complete Day 1 core tasks,Pending
+AIM0128,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,39,Complete Day 1 core tasks,Pending
+AIM0129,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,41,Complete Day 2 core tasks,Pending
+AIM0130,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,VS Code,Department Guide,Medium,Manager,53,Complete Day 2 core tasks,Pending
+AIM0131,Software Engineer,Engineering,Day 3,Meet onboarding buddy,VS Code,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+AIM0132,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,64,Complete Day 2 core tasks,Pending
+AIM0133,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,VS Code,Documentation Guide,High,Team Lead,29,Complete Day 3 core tasks,Pending
+AIM0134,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,44,Complete Day 3 core tasks,Pending
+AIM0135,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,62,Complete Day 3 core tasks,Pending
+AIM0136,Software Engineer,Engineering,Day 4,Attend department check-in,VS Code,Department Meeting Calendar,Medium,Manager,33,Complete Day 3 core tasks,Pending
+AIM0137,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,17,Complete Day 4 core tasks,Pending
+AIM0138,Software Engineer,Engineering,Day 5,Review pending access requests,VS Code,Access Status Guide,Medium,IT Helpdesk,18,Complete Day 4 core tasks,Pending
+AIM0139,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,40,Complete Day 4 core tasks,Pending
+AIM0140,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,11,Complete Day 4 core tasks,Pending
+AIM0141,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,37,,Pending
+AIM0142,Sales Executive,Sales,Day 1,Set up company email account,Salesforce,IT Setup Guide,High,IT Helpdesk,34,,Pending
+AIM0143,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,15,,Pending
+AIM0144,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,51,,Pending
+AIM0145,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,Salesforce,Role Setup Guide,High,IT Helpdesk,61,Complete Day 1 core tasks,Pending
+AIM0146,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0147,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,40,Complete Day 1 core tasks,Pending
+AIM0148,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,29,Complete Day 1 core tasks,Pending
+AIM0149,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0150,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Salesforce,Department Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0151,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,32,Complete Day 2 core tasks,Pending
+AIM0152,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0153,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,38,Complete Day 3 core tasks,Pending
+AIM0154,Sales Executive,Sales,Day 4,Review current team projects,Salesforce,Project Overview,Medium,Team Lead,41,Complete Day 3 core tasks,Pending
+AIM0155,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,55,Complete Day 3 core tasks,Pending
+AIM0156,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,40,Complete Day 3 core tasks,Pending
+AIM0157,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,26,Complete Day 4 core tasks,Pending
+AIM0158,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,27,Complete Day 4 core tasks,Pending
+AIM0159,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,38,Complete Day 4 core tasks,Pending
+AIM0160,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,10,Complete Day 4 core tasks,Pending
+AIM0161,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,29,,Pending
+AIM0162,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,37,,Pending
+AIM0163,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,27,,Pending
+AIM0164,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,49,,Pending
+AIM0165,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,59,Complete Day 1 core tasks,Pending
+AIM0166,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,46,Complete Day 1 core tasks,Pending
+AIM0167,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,26,Complete Day 1 core tasks,Pending
+AIM0168,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,35,Complete Day 1 core tasks,Pending
+AIM0169,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,48,Complete Day 2 core tasks,Pending
+AIM0170,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,43,Complete Day 2 core tasks,Pending
+AIM0171,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,38,Complete Day 2 core tasks,Pending
+AIM0172,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,68,Complete Day 2 core tasks,Pending
+AIM0173,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,32,Complete Day 3 core tasks,Pending
+AIM0174,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,49,Complete Day 3 core tasks,Pending
+AIM0175,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,60,Complete Day 3 core tasks,Pending
+AIM0176,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,29,Complete Day 3 core tasks,Pending
+AIM0177,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,24,Complete Day 4 core tasks,Pending
+AIM0178,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,17,Complete Day 4 core tasks,Pending
+AIM0179,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,32,Complete Day 4 core tasks,Pending
+AIM0180,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,11,Complete Day 4 core tasks,Pending
+AIM0181,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,VS Code,Onboarding Guide,High,HR Team,28,,Pending
+AIM0182,Software Engineer,Engineering,Day 1,Set up company email account,VS Code,IT Setup Guide,High,IT Helpdesk,27,,Pending
+AIM0183,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,23,,Pending
+AIM0184,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,50,,Pending
+AIM0185,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,VS Code,Role Setup Guide,High,IT Helpdesk,70,Complete Day 1 core tasks,Pending
+AIM0186,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,23,Complete Day 1 core tasks,Pending
+AIM0187,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,33,Complete Day 1 core tasks,Pending
+AIM0188,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,25,Complete Day 1 core tasks,Pending
+AIM0189,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,43,Complete Day 2 core tasks,Pending
+AIM0190,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,43,Complete Day 2 core tasks,Pending
+AIM0191,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,29,Complete Day 2 core tasks,Pending
+AIM0192,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0193,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,39,Complete Day 3 core tasks,Pending
+AIM0194,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,41,Complete Day 3 core tasks,Pending
+AIM0195,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,VS Code,Repository Setup Guide,High,Manager,61,Complete Day 3 core tasks,Pending
+AIM0196,Software Engineer,Engineering,Day 4,Attend department check-in,VS Code,Department Meeting Calendar,Medium,Manager,39,Complete Day 3 core tasks,Pending
+AIM0197,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0198,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,29,Complete Day 4 core tasks,Pending
+AIM0199,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,34,Complete Day 4 core tasks,Pending
+AIM0200,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0201,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,36,,Pending
+AIM0202,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,27,,Pending
+AIM0203,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,30,,Pending
+AIM0204,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,53,,Pending
+AIM0205,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,65,Complete Day 1 core tasks,Pending
+AIM0206,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,25,Complete Day 1 core tasks,Pending
+AIM0207,Sales Executive,Sales,Day 2,Request required application access,Salesforce,Access Request Guide,High,IT Helpdesk,31,Complete Day 1 core tasks,Pending
+AIM0208,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,32,Complete Day 1 core tasks,Pending
+AIM0209,Sales Executive,Sales,Day 3,Complete information security training,Salesforce,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0210,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+AIM0211,Sales Executive,Sales,Day 3,Meet onboarding buddy,Salesforce,Buddy Introduction,Medium,Onboarding Buddy,31,Complete Day 2 core tasks,Pending
+AIM0212,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,61,Complete Day 2 core tasks,Pending
+AIM0213,Sales Executive,Sales,Day 4,Access team documentation and shared resources,Salesforce,Documentation Guide,High,Team Lead,37,Complete Day 3 core tasks,Pending
+AIM0214,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,55,Complete Day 3 core tasks,Pending
+AIM0215,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,67,Complete Day 3 core tasks,Pending
+AIM0216,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+AIM0217,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0218,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,25,Complete Day 4 core tasks,Pending
+AIM0219,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,37,Complete Day 4 core tasks,Pending
+AIM0220,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0221,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,25,,Pending
+AIM0222,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,28,,Pending
+AIM0223,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0224,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,42,,Pending
+AIM0225,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,64,Complete Day 1 core tasks,Pending
+AIM0226,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,51,Complete Day 1 core tasks,Pending
+AIM0227,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,36,Complete Day 1 core tasks,Pending
+AIM0228,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,27,Complete Day 1 core tasks,Pending
+AIM0229,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,46,Complete Day 2 core tasks,Pending
+AIM0230,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,49,Complete Day 2 core tasks,Pending
+AIM0231,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,39,Complete Day 2 core tasks,Pending
+AIM0232,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,70,Complete Day 2 core tasks,Pending
+AIM0233,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,25,Complete Day 3 core tasks,Pending
+AIM0234,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,41,Complete Day 3 core tasks,Pending
+AIM0235,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,57,Complete Day 3 core tasks,Pending
+AIM0236,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,34,Complete Day 3 core tasks,Pending
+AIM0237,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,25,Complete Day 4 core tasks,Pending
+AIM0238,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,23,Complete Day 4 core tasks,Pending
+AIM0239,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,33,Complete Day 4 core tasks,Pending
+AIM0240,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,17,Complete Day 4 core tasks,Pending
+AIM0241,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,38,,Pending
+AIM0242,Software Engineer,Engineering,Day 1,Set up company email account,VS Code,IT Setup Guide,High,IT Helpdesk,26,,Pending
+AIM0243,Software Engineer,Engineering,Day 1,Join company communication channels,VS Code,Communication Guide,High,IT Helpdesk,22,,Pending
+AIM0244,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,50,,Pending
+AIM0245,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,58,Complete Day 1 core tasks,Pending
+AIM0246,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,25,Complete Day 1 core tasks,Pending
+AIM0247,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,38,Complete Day 1 core tasks,Pending
+AIM0248,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,37,Complete Day 1 core tasks,Pending
+AIM0249,Software Engineer,Engineering,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,48,Complete Day 2 core tasks,Pending
+AIM0250,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,VS Code,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+AIM0251,Software Engineer,Engineering,Day 3,Meet onboarding buddy,VS Code,Buddy Introduction,Medium,Onboarding Buddy,26,Complete Day 2 core tasks,Pending
+AIM0252,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,69,Complete Day 2 core tasks,Pending
+AIM0253,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,27,Complete Day 3 core tasks,Pending
+AIM0254,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,51,Complete Day 3 core tasks,Pending
+AIM0255,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+AIM0256,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,37,Complete Day 3 core tasks,Pending
+AIM0257,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,25,Complete Day 4 core tasks,Pending
+AIM0258,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,30,Complete Day 4 core tasks,Pending
+AIM0259,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,31,Complete Day 4 core tasks,Pending
+AIM0260,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,11,Complete Day 4 core tasks,Pending
+AIM0261,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,26,,Pending
+AIM0262,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,26,,Pending
+AIM0263,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,23,,Pending
+AIM0264,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,40,,Pending
+AIM0265,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,61,Complete Day 1 core tasks,Pending
+AIM0266,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,19,Complete Day 1 core tasks,Pending
+AIM0267,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,25,Complete Day 1 core tasks,Pending
+AIM0268,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,29,Complete Day 1 core tasks,Pending
+AIM0269,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,48,Complete Day 2 core tasks,Pending
+AIM0270,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,41,Complete Day 2 core tasks,Pending
+AIM0271,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,35,Complete Day 2 core tasks,Pending
+AIM0272,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,59,Complete Day 2 core tasks,Pending
+AIM0273,Sales Executive,Sales,Day 4,Access team documentation and shared resources,Salesforce,Documentation Guide,High,Team Lead,35,Complete Day 3 core tasks,Pending
+AIM0274,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,55,Complete Day 3 core tasks,Pending
+AIM0275,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,64,Complete Day 3 core tasks,Pending
+AIM0276,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,26,Complete Day 3 core tasks,Pending
+AIM0277,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Salesforce,Checklist Guide,High,HR Team,18,Complete Day 4 core tasks,Pending
+AIM0278,Sales Executive,Sales,Day 5,Review pending access requests,Salesforce,Access Status Guide,Medium,IT Helpdesk,18,Complete Day 4 core tasks,Pending
+AIM0279,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,37,Complete Day 4 core tasks,Pending
+AIM0280,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,13,Complete Day 4 core tasks,Pending
+AIM0281,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,39,,Pending
+AIM0282,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,25,,Pending
+AIM0283,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,28,,Pending
+AIM0284,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,49,,Pending
+AIM0285,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,59,Complete Day 1 core tasks,Pending
+AIM0286,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,53,Complete Day 1 core tasks,Pending
+AIM0287,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,40,Complete Day 1 core tasks,Pending
+AIM0288,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,39,Complete Day 1 core tasks,Pending
+AIM0289,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,53,Complete Day 2 core tasks,Pending
+AIM0290,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,53,Complete Day 2 core tasks,Pending
+AIM0291,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,26,Complete Day 2 core tasks,Pending
+AIM0292,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,56,Complete Day 2 core tasks,Pending
+AIM0293,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,33,Complete Day 3 core tasks,Pending
+AIM0294,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,50,Complete Day 3 core tasks,Pending
+AIM0295,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,68,Complete Day 3 core tasks,Pending
+AIM0296,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,36,Complete Day 3 core tasks,Pending
+AIM0297,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0298,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,26,Complete Day 4 core tasks,Pending
+AIM0299,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,33,Complete Day 4 core tasks,Pending
+AIM0300,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,10,Complete Day 4 core tasks,Pending
+AIM0301,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,VS Code,Onboarding Guide,High,HR Team,28,,Pending
+AIM0302,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0303,Software Engineer,Engineering,Day 1,Join company communication channels,VS Code,Communication Guide,High,IT Helpdesk,20,,Pending
+AIM0304,Software Engineer,Engineering,Day 1,Review employee handbook,VS Code,Employee Handbook,Medium,HR Team,41,,Pending
+AIM0305,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,64,Complete Day 1 core tasks,Pending
+AIM0306,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,22,Complete Day 1 core tasks,Pending
+AIM0307,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,38,Complete Day 1 core tasks,Pending
+AIM0308,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,34,Complete Day 1 core tasks,Pending
+AIM0309,Software Engineer,Engineering,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,48,Complete Day 2 core tasks,Pending
+AIM0310,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,44,Complete Day 2 core tasks,Pending
+AIM0311,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,29,Complete Day 2 core tasks,Pending
+AIM0312,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,65,Complete Day 2 core tasks,Pending
+AIM0313,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,VS Code,Documentation Guide,High,Team Lead,32,Complete Day 3 core tasks,Pending
+AIM0314,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,48,Complete Day 3 core tasks,Pending
+AIM0315,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,57,Complete Day 3 core tasks,Pending
+AIM0316,Software Engineer,Engineering,Day 4,Attend department check-in,VS Code,Department Meeting Calendar,Medium,Manager,26,Complete Day 3 core tasks,Pending
+AIM0317,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0318,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,19,Complete Day 4 core tasks,Pending
+AIM0319,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,31,Complete Day 4 core tasks,Pending
+AIM0320,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0321,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,38,,Pending
+AIM0322,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,28,,Pending
+AIM0323,Sales Executive,Sales,Day 1,Join company communication channels,Salesforce,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0324,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,40,,Pending
+AIM0325,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,57,Complete Day 1 core tasks,Pending
+AIM0326,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,18,Complete Day 1 core tasks,Pending
+AIM0327,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,34,Complete Day 1 core tasks,Pending
+AIM0328,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,36,Complete Day 1 core tasks,Pending
+AIM0329,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,49,Complete Day 2 core tasks,Pending
+AIM0330,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+AIM0331,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,28,Complete Day 2 core tasks,Pending
+AIM0332,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,61,Complete Day 2 core tasks,Pending
+AIM0333,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,40,Complete Day 3 core tasks,Pending
+AIM0334,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,48,Complete Day 3 core tasks,Pending
+AIM0335,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,57,Complete Day 3 core tasks,Pending
+AIM0336,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,39,Complete Day 3 core tasks,Pending
+AIM0337,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0338,Sales Executive,Sales,Day 5,Review pending access requests,Salesforce,Access Status Guide,Medium,IT Helpdesk,27,Complete Day 4 core tasks,Pending
+AIM0339,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,31,Complete Day 4 core tasks,Pending
+AIM0340,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,17,Complete Day 4 core tasks,Pending
+AIM0341,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,38,,Pending
+AIM0342,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,38,,Pending
+AIM0343,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,24,,Pending
+AIM0344,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,,Pending
+AIM0345,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,56,Complete Day 1 core tasks,Pending
+AIM0346,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,51,Complete Day 1 core tasks,Pending
+AIM0347,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,36,Complete Day 1 core tasks,Pending
+AIM0348,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,38,Complete Day 1 core tasks,Pending
+AIM0349,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,43,Complete Day 2 core tasks,Pending
+AIM0350,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,49,Complete Day 2 core tasks,Pending
+AIM0351,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,33,Complete Day 2 core tasks,Pending
+AIM0352,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,70,Complete Day 2 core tasks,Pending
+AIM0353,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,31,Complete Day 3 core tasks,Pending
+AIM0354,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,44,Complete Day 3 core tasks,Pending
+AIM0355,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,67,Complete Day 3 core tasks,Pending
+AIM0356,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,31,Complete Day 3 core tasks,Pending
+AIM0357,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,25,Complete Day 4 core tasks,Pending
+AIM0358,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,18,Complete Day 4 core tasks,Pending
+AIM0359,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,36,Complete Day 4 core tasks,Pending
+AIM0360,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,12,Complete Day 4 core tasks,Pending
+AIM0361,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,40,,Pending
+AIM0362,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,33,,Pending
+AIM0363,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,25,,Pending
+AIM0364,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,42,,Pending
+AIM0365,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+AIM0366,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0367,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,32,Complete Day 1 core tasks,Pending
+AIM0368,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,32,Complete Day 1 core tasks,Pending
+AIM0369,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,43,Complete Day 2 core tasks,Pending
+AIM0370,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,VS Code,Department Guide,Medium,Manager,54,Complete Day 2 core tasks,Pending
+AIM0371,Software Engineer,Engineering,Day 3,Meet onboarding buddy,VS Code,Buddy Introduction,Medium,Onboarding Buddy,28,Complete Day 2 core tasks,Pending
+AIM0372,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,59,Complete Day 2 core tasks,Pending
+AIM0373,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,36,Complete Day 3 core tasks,Pending
+AIM0374,Software Engineer,Engineering,Day 4,Review current team projects,VS Code,Project Overview,Medium,Team Lead,47,Complete Day 3 core tasks,Pending
+AIM0375,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,VS Code,Repository Setup Guide,High,Manager,68,Complete Day 3 core tasks,Pending
+AIM0376,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,38,Complete Day 3 core tasks,Pending
+AIM0377,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,21,Complete Day 4 core tasks,Pending
+AIM0378,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,25,Complete Day 4 core tasks,Pending
+AIM0379,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,VS Code,Weekly Check-in Guide,High,Manager,36,Complete Day 4 core tasks,Pending
+AIM0380,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+AIM0381,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,39,,Pending
+AIM0382,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,38,,Pending
+AIM0383,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,26,,Pending
+AIM0384,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,53,,Pending
+AIM0385,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,59,Complete Day 1 core tasks,Pending
+AIM0386,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,24,Complete Day 1 core tasks,Pending
+AIM0387,Sales Executive,Sales,Day 2,Request required application access,Salesforce,Access Request Guide,High,IT Helpdesk,34,Complete Day 1 core tasks,Pending
+AIM0388,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,32,Complete Day 1 core tasks,Pending
+AIM0389,Sales Executive,Sales,Day 3,Complete information security training,Salesforce,Security Training,High,IT Security,40,Complete Day 2 core tasks,Pending
+AIM0390,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,46,Complete Day 2 core tasks,Pending
+AIM0391,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,31,Complete Day 2 core tasks,Pending
+AIM0392,Sales Executive,Sales,Day 3,Complete role-specific learning module,Salesforce,Role Learning Guide,Medium,Manager,57,Complete Day 2 core tasks,Pending
+AIM0393,Sales Executive,Sales,Day 4,Access team documentation and shared resources,Salesforce,Documentation Guide,High,Team Lead,29,Complete Day 3 core tasks,Pending
+AIM0394,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,40,Complete Day 3 core tasks,Pending
+AIM0395,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,61,Complete Day 3 core tasks,Pending
+AIM0396,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,29,Complete Day 3 core tasks,Pending
+AIM0397,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Salesforce,Checklist Guide,High,HR Team,21,Complete Day 4 core tasks,Pending
+AIM0398,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,19,Complete Day 4 core tasks,Pending
+AIM0399,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,36,Complete Day 4 core tasks,Pending
+AIM0400,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,25,Complete Day 4 core tasks,Pending
+AIM0401,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,40,,Pending
+AIM0402,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,37,,Pending
+AIM0403,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,19,,Pending
+AIM0404,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0405,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,56,Complete Day 1 core tasks,Pending
+AIM0406,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,41,Complete Day 1 core tasks,Pending
+AIM0407,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,35,Complete Day 1 core tasks,Pending
+AIM0408,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,33,Complete Day 1 core tasks,Pending
+AIM0409,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,41,Complete Day 2 core tasks,Pending
+AIM0410,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,55,Complete Day 2 core tasks,Pending
+AIM0411,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,40,Complete Day 2 core tasks,Pending
+AIM0412,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,66,Complete Day 2 core tasks,Pending
+AIM0413,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,29,Complete Day 3 core tasks,Pending
+AIM0414,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,40,Complete Day 3 core tasks,Pending
+AIM0415,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,69,Complete Day 3 core tasks,Pending
+AIM0416,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,40,Complete Day 3 core tasks,Pending
+AIM0417,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,18,Complete Day 4 core tasks,Pending
+AIM0418,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,21,Complete Day 4 core tasks,Pending
+AIM0419,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,28,Complete Day 4 core tasks,Pending
+AIM0420,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,18,Complete Day 4 core tasks,Pending
+AIM0421,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,32,,Pending
+AIM0422,Software Engineer,Engineering,Day 1,Set up company email account,VS Code,IT Setup Guide,High,IT Helpdesk,38,,Pending
+AIM0423,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,30,,Pending
+AIM0424,Software Engineer,Engineering,Day 1,Review employee handbook,VS Code,Employee Handbook,Medium,HR Team,40,,Pending
+AIM0425,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,67,Complete Day 1 core tasks,Pending
+AIM0426,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,26,Complete Day 1 core tasks,Pending
+AIM0427,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,36,Complete Day 1 core tasks,Pending
+AIM0428,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,36,Complete Day 1 core tasks,Pending
+AIM0429,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,54,Complete Day 2 core tasks,Pending
+AIM0430,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,43,Complete Day 2 core tasks,Pending
+AIM0431,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,32,Complete Day 2 core tasks,Pending
+AIM0432,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0433,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,33,Complete Day 3 core tasks,Pending
+AIM0434,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,40,Complete Day 3 core tasks,Pending
+AIM0435,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,64,Complete Day 3 core tasks,Pending
+AIM0436,Software Engineer,Engineering,Day 4,Attend department check-in,VS Code,Department Meeting Calendar,Medium,Manager,35,Complete Day 3 core tasks,Pending
+AIM0437,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,23,Complete Day 4 core tasks,Pending
+AIM0438,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+AIM0439,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,VS Code,Weekly Check-in Guide,High,Manager,36,Complete Day 4 core tasks,Pending
+AIM0440,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0441,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,33,,Pending
+AIM0442,Sales Executive,Sales,Day 1,Set up company email account,Salesforce,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0443,Sales Executive,Sales,Day 1,Join company communication channels,Salesforce,Communication Guide,High,IT Helpdesk,25,,Pending
+AIM0444,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,,Pending
+AIM0445,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,63,Complete Day 1 core tasks,Pending
+AIM0446,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,30,Complete Day 1 core tasks,Pending
+AIM0447,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,33,Complete Day 1 core tasks,Pending
+AIM0448,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,27,Complete Day 1 core tasks,Pending
+AIM0449,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,53,Complete Day 2 core tasks,Pending
+AIM0450,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,51,Complete Day 2 core tasks,Pending
+AIM0451,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,32,Complete Day 2 core tasks,Pending
+AIM0452,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,69,Complete Day 2 core tasks,Pending
+AIM0453,Sales Executive,Sales,Day 4,Access team documentation and shared resources,Salesforce,Documentation Guide,High,Team Lead,26,Complete Day 3 core tasks,Pending
+AIM0454,Sales Executive,Sales,Day 4,Review current team projects,Salesforce,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+AIM0455,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,63,Complete Day 3 core tasks,Pending
+AIM0456,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,25,Complete Day 3 core tasks,Pending
+AIM0457,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,29,Complete Day 4 core tasks,Pending
+AIM0458,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+AIM0459,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,40,Complete Day 4 core tasks,Pending
+AIM0460,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0461,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,,Pending
+AIM0462,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0463,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0464,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,54,,Pending
+AIM0465,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,58,Complete Day 1 core tasks,Pending
+AIM0466,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,49,Complete Day 1 core tasks,Pending
+AIM0467,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,38,Complete Day 1 core tasks,Pending
+AIM0468,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,28,Complete Day 1 core tasks,Pending
+AIM0469,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0470,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,53,Complete Day 2 core tasks,Pending
+AIM0471,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,29,Complete Day 2 core tasks,Pending
+AIM0472,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,67,Complete Day 2 core tasks,Pending
+AIM0473,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0474,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,47,Complete Day 3 core tasks,Pending
+AIM0475,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,59,Complete Day 3 core tasks,Pending
+AIM0476,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0477,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0478,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,17,Complete Day 4 core tasks,Pending
+AIM0479,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,31,Complete Day 4 core tasks,Pending
+AIM0480,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0481,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,39,,Pending
+AIM0482,Software Engineer,Engineering,Day 1,Set up company email account,VS Code,IT Setup Guide,High,IT Helpdesk,31,,Pending
+AIM0483,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,26,,Pending
+AIM0484,Software Engineer,Engineering,Day 1,Review employee handbook,VS Code,Employee Handbook,Medium,HR Team,41,,Pending
+AIM0485,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,VS Code,Role Setup Guide,High,IT Helpdesk,64,Complete Day 1 core tasks,Pending
+AIM0486,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0487,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,37,Complete Day 1 core tasks,Pending
+AIM0488,Software Engineer,Engineering,Day 2,Meet assigned manager,VS Code,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+AIM0489,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,50,Complete Day 2 core tasks,Pending
+AIM0490,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,VS Code,Department Guide,Medium,Manager,46,Complete Day 2 core tasks,Pending
+AIM0491,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,32,Complete Day 2 core tasks,Pending
+AIM0492,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,58,Complete Day 2 core tasks,Pending
+AIM0493,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,28,Complete Day 3 core tasks,Pending
+AIM0494,Software Engineer,Engineering,Day 4,Review current team projects,VS Code,Project Overview,Medium,Team Lead,46,Complete Day 3 core tasks,Pending
+AIM0495,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,VS Code,Repository Setup Guide,High,Manager,61,Complete Day 3 core tasks,Pending
+AIM0496,Software Engineer,Engineering,Day 4,Attend department check-in,VS Code,Department Meeting Calendar,Medium,Manager,38,Complete Day 3 core tasks,Pending
+AIM0497,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0498,Software Engineer,Engineering,Day 5,Review pending access requests,VS Code,Access Status Guide,Medium,IT Helpdesk,22,Complete Day 4 core tasks,Pending
+AIM0499,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,33,Complete Day 4 core tasks,Pending
+AIM0500,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0501,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,28,,Pending
+AIM0502,Sales Executive,Sales,Day 1,Set up company email account,Salesforce,IT Setup Guide,High,IT Helpdesk,30,,Pending
+AIM0503,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,28,,Pending
+AIM0504,Sales Executive,Sales,Day 1,Review employee handbook,Salesforce,Employee Handbook,Medium,HR Team,50,,Pending
+AIM0505,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,Salesforce,Role Setup Guide,High,IT Helpdesk,58,Complete Day 1 core tasks,Pending
+AIM0506,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,29,Complete Day 1 core tasks,Pending
+AIM0507,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,38,Complete Day 1 core tasks,Pending
+AIM0508,Sales Executive,Sales,Day 2,Meet assigned manager,Salesforce,Manager Introduction,Medium,Manager,36,Complete Day 1 core tasks,Pending
+AIM0509,Sales Executive,Sales,Day 3,Complete information security training,Salesforce,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0510,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,42,Complete Day 2 core tasks,Pending
+AIM0511,Sales Executive,Sales,Day 3,Meet onboarding buddy,Salesforce,Buddy Introduction,Medium,Onboarding Buddy,39,Complete Day 2 core tasks,Pending
+AIM0512,Sales Executive,Sales,Day 3,Complete role-specific learning module,Salesforce,Role Learning Guide,Medium,Manager,58,Complete Day 2 core tasks,Pending
+AIM0513,Sales Executive,Sales,Day 4,Access team documentation and shared resources,Salesforce,Documentation Guide,High,Team Lead,36,Complete Day 3 core tasks,Pending
+AIM0514,Sales Executive,Sales,Day 4,Review current team projects,Salesforce,Project Overview,Medium,Team Lead,49,Complete Day 3 core tasks,Pending
+AIM0515,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,58,Complete Day 3 core tasks,Pending
+AIM0516,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,34,Complete Day 3 core tasks,Pending
+AIM0517,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Salesforce,Checklist Guide,High,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0518,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,28,Complete Day 4 core tasks,Pending
+AIM0519,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Salesforce,Weekly Check-in Guide,High,Manager,39,Complete Day 4 core tasks,Pending
+AIM0520,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,22,Complete Day 4 core tasks,Pending
+AIM0521,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,28,,Pending
+AIM0522,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0523,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0524,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0525,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,57,Complete Day 1 core tasks,Pending
+AIM0526,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,45,Complete Day 1 core tasks,Pending
+AIM0527,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,29,Complete Day 1 core tasks,Pending
+AIM0528,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,28,Complete Day 1 core tasks,Pending
+AIM0529,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,53,Complete Day 2 core tasks,Pending
+AIM0530,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,41,Complete Day 2 core tasks,Pending
+AIM0531,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,31,Complete Day 2 core tasks,Pending
+AIM0532,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,55,Complete Day 2 core tasks,Pending
+AIM0533,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0534,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,51,Complete Day 3 core tasks,Pending
+AIM0535,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,56,Complete Day 3 core tasks,Pending
+AIM0536,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,39,Complete Day 3 core tasks,Pending
+AIM0537,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0538,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,17,Complete Day 4 core tasks,Pending
+AIM0539,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,37,Complete Day 4 core tasks,Pending
+AIM0540,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,18,Complete Day 4 core tasks,Pending
+AIM0541,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,VS Code,Onboarding Guide,High,HR Team,39,,Pending
+AIM0542,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,25,,Pending
+AIM0543,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,21,,Pending
+AIM0544,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,42,,Pending
+AIM0545,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,61,Complete Day 1 core tasks,Pending
+AIM0546,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,23,Complete Day 1 core tasks,Pending
+AIM0547,Software Engineer,Engineering,Day 2,Request required application access,VS Code,Access Request Guide,High,IT Helpdesk,36,Complete Day 1 core tasks,Pending
+AIM0548,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,25,Complete Day 1 core tasks,Pending
+AIM0549,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0550,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,50,Complete Day 2 core tasks,Pending
+AIM0551,Software Engineer,Engineering,Day 3,Meet onboarding buddy,VS Code,Buddy Introduction,Medium,Onboarding Buddy,25,Complete Day 2 core tasks,Pending
+AIM0552,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,64,Complete Day 2 core tasks,Pending
+AIM0553,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,38,Complete Day 3 core tasks,Pending
+AIM0554,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,44,Complete Day 3 core tasks,Pending
+AIM0555,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,63,Complete Day 3 core tasks,Pending
+AIM0556,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,31,Complete Day 3 core tasks,Pending
+AIM0557,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0558,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,24,Complete Day 4 core tasks,Pending
+AIM0559,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,27,Complete Day 4 core tasks,Pending
+AIM0560,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0561,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,25,,Pending
+AIM0562,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,37,,Pending
+AIM0563,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,30,,Pending
+AIM0564,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,41,,Pending
+AIM0565,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,57,Complete Day 1 core tasks,Pending
+AIM0566,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,25,Complete Day 1 core tasks,Pending
+AIM0567,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,29,Complete Day 1 core tasks,Pending
+AIM0568,Sales Executive,Sales,Day 2,Meet assigned manager,Salesforce,Manager Introduction,Medium,Manager,27,Complete Day 1 core tasks,Pending
+AIM0569,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,55,Complete Day 2 core tasks,Pending
+AIM0570,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Salesforce,Department Guide,Medium,Manager,54,Complete Day 2 core tasks,Pending
+AIM0571,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,39,Complete Day 2 core tasks,Pending
+AIM0572,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,66,Complete Day 2 core tasks,Pending
+AIM0573,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,31,Complete Day 3 core tasks,Pending
+AIM0574,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,48,Complete Day 3 core tasks,Pending
+AIM0575,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,63,Complete Day 3 core tasks,Pending
+AIM0576,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,37,Complete Day 3 core tasks,Pending
+AIM0577,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Salesforce,Checklist Guide,High,HR Team,27,Complete Day 4 core tasks,Pending
+AIM0578,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,29,Complete Day 4 core tasks,Pending
+AIM0579,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,33,Complete Day 4 core tasks,Pending
+AIM0580,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,11,Complete Day 4 core tasks,Pending
+AIM0581,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,32,,Pending
+AIM0582,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,25,,Pending
+AIM0583,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,27,,Pending
+AIM0584,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,51,,Pending
+AIM0585,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,65,Complete Day 1 core tasks,Pending
+AIM0586,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,45,Complete Day 1 core tasks,Pending
+AIM0587,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,31,Complete Day 1 core tasks,Pending
+AIM0588,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,31,Complete Day 1 core tasks,Pending
+AIM0589,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,48,Complete Day 2 core tasks,Pending
+AIM0590,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,47,Complete Day 2 core tasks,Pending
+AIM0591,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+AIM0592,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,61,Complete Day 2 core tasks,Pending
+AIM0593,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,29,Complete Day 3 core tasks,Pending
+AIM0594,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,50,Complete Day 3 core tasks,Pending
+AIM0595,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,66,Complete Day 3 core tasks,Pending
+AIM0596,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,28,Complete Day 3 core tasks,Pending
+AIM0597,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,24,Complete Day 4 core tasks,Pending
+AIM0598,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,29,Complete Day 4 core tasks,Pending
+AIM0599,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,40,Complete Day 4 core tasks,Pending
+AIM0600,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,12,Complete Day 4 core tasks,Pending
+AIM0601,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,32,,Pending
+AIM0602,Software Engineer,Engineering,Day 1,Set up company email account,VS Code,IT Setup Guide,High,IT Helpdesk,29,,Pending
+AIM0603,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,16,,Pending
+AIM0604,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0605,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,69,Complete Day 1 core tasks,Pending
+AIM0606,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0607,Software Engineer,Engineering,Day 2,Request required application access,VS Code,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+AIM0608,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,37,Complete Day 1 core tasks,Pending
+AIM0609,Software Engineer,Engineering,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,41,Complete Day 2 core tasks,Pending
+AIM0610,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,55,Complete Day 2 core tasks,Pending
+AIM0611,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,34,Complete Day 2 core tasks,Pending
+AIM0612,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,56,Complete Day 2 core tasks,Pending
+AIM0613,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,VS Code,Documentation Guide,High,Team Lead,28,Complete Day 3 core tasks,Pending
+AIM0614,Software Engineer,Engineering,Day 4,Review current team projects,VS Code,Project Overview,Medium,Team Lead,48,Complete Day 3 core tasks,Pending
+AIM0615,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,66,Complete Day 3 core tasks,Pending
+AIM0616,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,34,Complete Day 3 core tasks,Pending
+AIM0617,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0618,Software Engineer,Engineering,Day 5,Review pending access requests,VS Code,Access Status Guide,Medium,IT Helpdesk,19,Complete Day 4 core tasks,Pending
+AIM0619,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+AIM0620,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,19,Complete Day 4 core tasks,Pending
+AIM0621,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,38,,Pending
+AIM0622,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,,Pending
+AIM0623,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,15,,Pending
+AIM0624,Sales Executive,Sales,Day 1,Review employee handbook,Salesforce,Employee Handbook,Medium,HR Team,52,,Pending
+AIM0625,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,61,Complete Day 1 core tasks,Pending
+AIM0626,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,16,Complete Day 1 core tasks,Pending
+AIM0627,Sales Executive,Sales,Day 2,Request required application access,Salesforce,Access Request Guide,High,IT Helpdesk,31,Complete Day 1 core tasks,Pending
+AIM0628,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,29,Complete Day 1 core tasks,Pending
+AIM0629,Sales Executive,Sales,Day 3,Complete information security training,Salesforce,Security Training,High,IT Security,50,Complete Day 2 core tasks,Pending
+AIM0630,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,46,Complete Day 2 core tasks,Pending
+AIM0631,Sales Executive,Sales,Day 3,Meet onboarding buddy,Salesforce,Buddy Introduction,Medium,Onboarding Buddy,39,Complete Day 2 core tasks,Pending
+AIM0632,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,66,Complete Day 2 core tasks,Pending
+AIM0633,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,36,Complete Day 3 core tasks,Pending
+AIM0634,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+AIM0635,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+AIM0636,Sales Executive,Sales,Day 4,Attend department check-in,Salesforce,Department Meeting Calendar,Medium,Manager,28,Complete Day 3 core tasks,Pending
+AIM0637,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0638,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,29,Complete Day 4 core tasks,Pending
+AIM0639,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,29,Complete Day 4 core tasks,Pending
+AIM0640,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,17,Complete Day 4 core tasks,Pending
+AIM0641,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,38,,Pending
+AIM0642,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,31,,Pending
+AIM0643,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,17,,Pending
+AIM0644,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0645,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,57,Complete Day 1 core tasks,Pending
+AIM0646,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,42,Complete Day 1 core tasks,Pending
+AIM0647,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,27,Complete Day 1 core tasks,Pending
+AIM0648,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,29,Complete Day 1 core tasks,Pending
+AIM0649,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,42,Complete Day 2 core tasks,Pending
+AIM0650,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,54,Complete Day 2 core tasks,Pending
+AIM0651,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,26,Complete Day 2 core tasks,Pending
+AIM0652,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,62,Complete Day 2 core tasks,Pending
+AIM0653,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,35,Complete Day 3 core tasks,Pending
+AIM0654,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,42,Complete Day 3 core tasks,Pending
+AIM0655,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,68,Complete Day 3 core tasks,Pending
+AIM0656,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,36,Complete Day 3 core tasks,Pending
+AIM0657,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,28,Complete Day 4 core tasks,Pending
+AIM0658,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,29,Complete Day 4 core tasks,Pending
+AIM0659,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,39,Complete Day 4 core tasks,Pending
+AIM0660,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+AIM0661,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,25,,Pending
+AIM0662,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,37,,Pending
+AIM0663,Software Engineer,Engineering,Day 1,Join company communication channels,VS Code,Communication Guide,High,IT Helpdesk,18,,Pending
+AIM0664,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,54,,Pending
+AIM0665,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,67,Complete Day 1 core tasks,Pending
+AIM0666,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,15,Complete Day 1 core tasks,Pending
+AIM0667,Software Engineer,Engineering,Day 2,Request required application access,VS Code,Access Request Guide,High,IT Helpdesk,39,Complete Day 1 core tasks,Pending
+AIM0668,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,25,Complete Day 1 core tasks,Pending
+AIM0669,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,46,Complete Day 2 core tasks,Pending
+AIM0670,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,42,Complete Day 2 core tasks,Pending
+AIM0671,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,27,Complete Day 2 core tasks,Pending
+AIM0672,Software Engineer,Engineering,Day 3,Complete role-specific learning module,VS Code,Role Learning Guide,Medium,Manager,69,Complete Day 2 core tasks,Pending
+AIM0673,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,36,Complete Day 3 core tasks,Pending
+AIM0674,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,47,Complete Day 3 core tasks,Pending
+AIM0675,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,56,Complete Day 3 core tasks,Pending
+AIM0676,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,32,Complete Day 3 core tasks,Pending
+AIM0677,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,23,Complete Day 4 core tasks,Pending
+AIM0678,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,17,Complete Day 4 core tasks,Pending
+AIM0679,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,34,Complete Day 4 core tasks,Pending
+AIM0680,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,10,Complete Day 4 core tasks,Pending
+AIM0681,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,36,,Pending
+AIM0682,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,36,,Pending
+AIM0683,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,27,,Pending
+AIM0684,Sales Executive,Sales,Day 1,Review employee handbook,Salesforce,Employee Handbook,Medium,HR Team,50,,Pending
+AIM0685,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,66,Complete Day 1 core tasks,Pending
+AIM0686,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+AIM0687,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,39,Complete Day 1 core tasks,Pending
+AIM0688,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,33,Complete Day 1 core tasks,Pending
+AIM0689,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,51,Complete Day 2 core tasks,Pending
+AIM0690,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,54,Complete Day 2 core tasks,Pending
+AIM0691,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,31,Complete Day 2 core tasks,Pending
+AIM0692,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+AIM0693,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,29,Complete Day 3 core tasks,Pending
+AIM0694,Sales Executive,Sales,Day 4,Review current team projects,Salesforce,Project Overview,Medium,Team Lead,42,Complete Day 3 core tasks,Pending
+AIM0695,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,57,Complete Day 3 core tasks,Pending
+AIM0696,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,35,Complete Day 3 core tasks,Pending
+AIM0697,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Salesforce,Checklist Guide,High,HR Team,29,Complete Day 4 core tasks,Pending
+AIM0698,Sales Executive,Sales,Day 5,Review pending access requests,Salesforce,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+AIM0699,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,40,Complete Day 4 core tasks,Pending
+AIM0700,Sales Executive,Sales,Day 5,Submit onboarding feedback,Salesforce,Feedback Form,Medium,HR Team,23,Complete Day 4 core tasks,Pending
+AIM0701,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,27,,Pending
+AIM0702,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,27,,Pending
+AIM0703,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,19,,Pending
+AIM0704,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,44,,Pending
+AIM0705,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,66,Complete Day 1 core tasks,Pending
+AIM0706,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,43,Complete Day 1 core tasks,Pending
+AIM0707,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,37,Complete Day 1 core tasks,Pending
+AIM0708,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,40,Complete Day 1 core tasks,Pending
+AIM0709,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,44,Complete Day 2 core tasks,Pending
+AIM0710,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,50,Complete Day 2 core tasks,Pending
+AIM0711,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,33,Complete Day 2 core tasks,Pending
+AIM0712,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,61,Complete Day 2 core tasks,Pending
+AIM0713,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,33,Complete Day 3 core tasks,Pending
+AIM0714,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,46,Complete Day 3 core tasks,Pending
+AIM0715,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,60,Complete Day 3 core tasks,Pending
+AIM0716,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,32,Complete Day 3 core tasks,Pending
+AIM0717,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0718,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+AIM0719,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,32,Complete Day 4 core tasks,Pending
+AIM0720,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0721,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,VS Code,Onboarding Guide,High,HR Team,31,,Pending
+AIM0722,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,39,,Pending
+AIM0723,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0724,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0725,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,58,Complete Day 1 core tasks,Pending
+AIM0726,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,27,Complete Day 1 core tasks,Pending
+AIM0727,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,36,Complete Day 1 core tasks,Pending
+AIM0728,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,28,Complete Day 1 core tasks,Pending
+AIM0729,Software Engineer,Engineering,Day 3,Complete information security training,VS Code,Security Training,High,IT Security,44,Complete Day 2 core tasks,Pending
+AIM0730,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,44,Complete Day 2 core tasks,Pending
+AIM0731,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,29,Complete Day 2 core tasks,Pending
+AIM0732,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,58,Complete Day 2 core tasks,Pending
+AIM0733,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,34,Complete Day 3 core tasks,Pending
+AIM0734,Software Engineer,Engineering,Day 4,Review current team projects,VS Code,Project Overview,Medium,Team Lead,42,Complete Day 3 core tasks,Pending
+AIM0735,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,VS Code,Repository Setup Guide,High,Manager,62,Complete Day 3 core tasks,Pending
+AIM0736,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,37,Complete Day 3 core tasks,Pending
+AIM0737,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,VS Code,Checklist Guide,High,HR Team,26,Complete Day 4 core tasks,Pending
+AIM0738,Software Engineer,Engineering,Day 5,Review pending access requests,VS Code,Access Status Guide,Medium,IT Helpdesk,27,Complete Day 4 core tasks,Pending
+AIM0739,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,32,Complete Day 4 core tasks,Pending
+AIM0740,Software Engineer,Engineering,Day 5,Submit onboarding feedback,VS Code,Feedback Form,Medium,HR Team,25,Complete Day 4 core tasks,Pending
+AIM0741,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,Salesforce,Onboarding Guide,High,HR Team,25,,Pending
+AIM0742,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,31,,Pending
+AIM0743,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,19,,Pending
+AIM0744,Sales Executive,Sales,Day 1,Review employee handbook,Salesforce,Employee Handbook,Medium,HR Team,55,,Pending
+AIM0745,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,Salesforce,Role Setup Guide,High,IT Helpdesk,64,Complete Day 1 core tasks,Pending
+AIM0746,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,27,Complete Day 1 core tasks,Pending
+AIM0747,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,28,Complete Day 1 core tasks,Pending
+AIM0748,Sales Executive,Sales,Day 2,Meet assigned manager,Salesforce,Manager Introduction,Medium,Manager,35,Complete Day 1 core tasks,Pending
+AIM0749,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,49,Complete Day 2 core tasks,Pending
+AIM0750,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,42,Complete Day 2 core tasks,Pending
+AIM0751,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,28,Complete Day 2 core tasks,Pending
+AIM0752,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,63,Complete Day 2 core tasks,Pending
+AIM0753,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,25,Complete Day 3 core tasks,Pending
+AIM0754,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,55,Complete Day 3 core tasks,Pending
+AIM0755,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,56,Complete Day 3 core tasks,Pending
+AIM0756,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,26,Complete Day 3 core tasks,Pending
+AIM0757,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+AIM0758,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+AIM0759,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,28,Complete Day 4 core tasks,Pending
+AIM0760,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,10,Complete Day 4 core tasks,Pending
+AIM0761,Operations Analyst,Operations,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,,Pending
+AIM0762,Operations Analyst,Operations,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,37,,Pending
+AIM0763,Operations Analyst,Operations,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,29,,Pending
+AIM0764,Operations Analyst,Operations,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,46,,Pending
+AIM0765,Operations Analyst,Operations,Day 2,Set up operations workstation and required software,IT Service Portal,Operations Setup Guide,High,IT Helpdesk,66,Complete Day 1 core tasks,Pending
+AIM0766,Operations Analyst,Operations,Day 2,Set up spreadsheet and reporting tools,Microsoft Excel,Operations Tools Guide,High,Operations Manager,52,Complete Day 1 core tasks,Pending
+AIM0767,Operations Analyst,Operations,Day 2,Request access to operations systems,IT Service Portal,Access Request Guide,High,IT Helpdesk,29,Complete Day 1 core tasks,Pending
+AIM0768,Operations Analyst,Operations,Day 2,Meet assigned operations manager,Microsoft Teams,Manager Introduction,Medium,Operations Manager,27,Complete Day 1 core tasks,Pending
+AIM0769,Operations Analyst,Operations,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+AIM0770,Operations Analyst,Operations,Day 3,Review standard operating procedures,Company Knowledge Base,SOP Guide,High,Operations Manager,42,Complete Day 2 core tasks,Pending
+AIM0771,Operations Analyst,Operations,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,33,Complete Day 2 core tasks,Pending
+AIM0772,Operations Analyst,Operations,Day 3,Complete operations process training,Learning Management System,Operations Learning Guide,Medium,Operations Manager,55,Complete Day 2 core tasks,Pending
+AIM0773,Operations Analyst,Operations,Day 4,Access operations documentation and shared resources,SharePoint,Operations Documentation Guide,High,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0774,Operations Analyst,Operations,Day 4,Review current operational workflows,Microsoft Excel,Workflow Guide,Medium,Operations Manager,52,Complete Day 3 core tasks,Pending
+AIM0775,Operations Analyst,Operations,Day 4,Complete first small operations task,Operations Workspace,Starter Task Guide,High,Operations Manager,66,Complete Day 3 core tasks,Pending
+AIM0776,Operations Analyst,Operations,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Operations Manager,38,Complete Day 3 core tasks,Pending
+AIM0777,Operations Analyst,Operations,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,16,Complete Day 4 core tasks,Pending
+AIM0778,Operations Analyst,Operations,Day 5,Review pending system access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,28,Complete Day 4 core tasks,Pending
+AIM0779,Operations Analyst,Operations,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Operations Manager,32,Complete Day 4 core tasks,Pending
+AIM0780,Operations Analyst,Operations,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,23,Complete Day 4 core tasks,Pending

@@ -1,0 +1,13 @@
+{
+  "source_rows": 60,
+  "expanded_rows": 780,
+  "train_rows": 624,
+  "test_rows": 156,
+  "test_loss": 0.0001627338642720133,
+  "test_accuracy": 1.0,
+  "labels": [
+    "Low",
+    "Medium",
+    "High"
+  ]
+}

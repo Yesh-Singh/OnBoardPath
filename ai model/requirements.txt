@@ -1,0 +1,7 @@
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+tensorflow>=2.16
+fastapi>=0.115
+uvicorn[standard]>=0.30

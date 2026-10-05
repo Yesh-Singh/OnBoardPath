@@ -1,0 +1,201 @@
+task_id,employee_role,department,day,task,tool,resource,priority,responsible_person,estimated_minutes,prerequisite,status
+FM001,Software Engineer,Engineering,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM002,Software Engineer,Engineering,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM003,Software Engineer,Engineering,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM004,Software Engineer,Engineering,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM005,Software Engineer,Engineering,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM006,Software Engineer,Engineering,Day 2,Install VS Code and development tools,VS Code,Developer Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM007,Software Engineer,Engineering,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM008,Software Engineer,Engineering,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM009,Software Engineer,Engineering,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM010,Software Engineer,Engineering,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM011,Software Engineer,Engineering,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM012,Software Engineer,Engineering,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM013,Software Engineer,Engineering,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM014,Software Engineer,Engineering,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM015,Software Engineer,Engineering,Day 4,Clone the team repository and review project structure,GitHub,Repository Setup Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM016,Software Engineer,Engineering,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM017,Software Engineer,Engineering,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM018,Software Engineer,Engineering,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM019,Software Engineer,Engineering,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM020,Software Engineer,Engineering,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM021,Data Analyst,Analytics,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM022,Data Analyst,Analytics,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM023,Data Analyst,Analytics,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM024,Data Analyst,Analytics,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM025,Data Analyst,Analytics,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM026,Data Analyst,Analytics,Day 2,Set up SQL client and analytics tools,MySQL Workbench,Analytics Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM027,Data Analyst,Analytics,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM028,Data Analyst,Analytics,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM029,Data Analyst,Analytics,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM030,Data Analyst,Analytics,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM031,Data Analyst,Analytics,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM032,Data Analyst,Analytics,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM033,Data Analyst,Analytics,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM034,Data Analyst,Analytics,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM035,Data Analyst,Analytics,Day 4,Access reporting dashboards and review key metrics,Power BI,Analytics Dashboard Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM036,Data Analyst,Analytics,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM037,Data Analyst,Analytics,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM038,Data Analyst,Analytics,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM039,Data Analyst,Analytics,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM040,Data Analyst,Analytics,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM041,Data Scientist,Analytics,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM042,Data Scientist,Analytics,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM043,Data Scientist,Analytics,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM044,Data Scientist,Analytics,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM045,Data Scientist,Analytics,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM046,Data Scientist,Analytics,Day 2,Set up Python environment and data science tools,Python/Jupyter,Data Science Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM047,Data Scientist,Analytics,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM048,Data Scientist,Analytics,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM049,Data Scientist,Analytics,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM050,Data Scientist,Analytics,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM051,Data Scientist,Analytics,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM052,Data Scientist,Analytics,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM053,Data Scientist,Analytics,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM054,Data Scientist,Analytics,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM055,Data Scientist,Analytics,Day 4,Access approved datasets and review model documentation,Jupyter/SharePoint,Data Science Documentation,High,Manager,60,Complete Day 3 core tasks,Pending
+FM056,Data Scientist,Analytics,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM057,Data Scientist,Analytics,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM058,Data Scientist,Analytics,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM059,Data Scientist,Analytics,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM060,Data Scientist,Analytics,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM061,Product Manager,Product,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM062,Product Manager,Product,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM063,Product Manager,Product,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM064,Product Manager,Product,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM065,Product Manager,Product,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM066,Product Manager,Product,Day 2,Set up product planning and collaboration tools,Jira,Product Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM067,Product Manager,Product,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM068,Product Manager,Product,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM069,Product Manager,Product,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM070,Product Manager,Product,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM071,Product Manager,Product,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM072,Product Manager,Product,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM073,Product Manager,Product,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM074,Product Manager,Product,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM075,Product Manager,Product,Day 4,Review product roadmap and active initiatives,Jira/Confluence,Product Roadmap Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM076,Product Manager,Product,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM077,Product Manager,Product,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM078,Product Manager,Product,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM079,Product Manager,Product,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM080,Product Manager,Product,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM081,UI/UX Designer,Design,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM082,UI/UX Designer,Design,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM083,UI/UX Designer,Design,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM084,UI/UX Designer,Design,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM085,UI/UX Designer,Design,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM086,UI/UX Designer,Design,Day 2,Set up design and collaboration tools,Figma,Design Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM087,UI/UX Designer,Design,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM088,UI/UX Designer,Design,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM089,UI/UX Designer,Design,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM090,UI/UX Designer,Design,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM091,UI/UX Designer,Design,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM092,UI/UX Designer,Design,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM093,UI/UX Designer,Design,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM094,UI/UX Designer,Design,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM095,UI/UX Designer,Design,Day 4,Review design system and current product files,Figma,Design System Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM096,UI/UX Designer,Design,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM097,UI/UX Designer,Design,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM098,UI/UX Designer,Design,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM099,UI/UX Designer,Design,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM100,UI/UX Designer,Design,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM101,HR Executive,Human Resources,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM102,HR Executive,Human Resources,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM103,HR Executive,Human Resources,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM104,HR Executive,Human Resources,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM105,HR Executive,Human Resources,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM106,HR Executive,Human Resources,Day 2,Request access to HR information systems,HRIS,HR Systems Access Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM107,HR Executive,Human Resources,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM108,HR Executive,Human Resources,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM109,HR Executive,Human Resources,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM110,HR Executive,Human Resources,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM111,HR Executive,Human Resources,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM112,HR Executive,Human Resources,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM113,HR Executive,Human Resources,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM114,HR Executive,Human Resources,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM115,HR Executive,Human Resources,Day 4,Review employee lifecycle workflows,HRIS,HR Workflow Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM116,HR Executive,Human Resources,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM117,HR Executive,Human Resources,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM118,HR Executive,Human Resources,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM119,HR Executive,Human Resources,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM120,HR Executive,Human Resources,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM121,Marketing Executive,Marketing,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM122,Marketing Executive,Marketing,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM123,Marketing Executive,Marketing,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM124,Marketing Executive,Marketing,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM125,Marketing Executive,Marketing,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM126,Marketing Executive,Marketing,Day 2,Set up marketing and campaign tools,HubSpot,Marketing Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM127,Marketing Executive,Marketing,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM128,Marketing Executive,Marketing,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM129,Marketing Executive,Marketing,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM130,Marketing Executive,Marketing,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM131,Marketing Executive,Marketing,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM132,Marketing Executive,Marketing,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM133,Marketing Executive,Marketing,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM134,Marketing Executive,Marketing,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM135,Marketing Executive,Marketing,Day 4,Review active campaigns and marketing calendar,HubSpot,Campaign Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM136,Marketing Executive,Marketing,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM137,Marketing Executive,Marketing,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM138,Marketing Executive,Marketing,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM139,Marketing Executive,Marketing,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM140,Marketing Executive,Marketing,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM141,Finance Analyst,Finance,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM142,Finance Analyst,Finance,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM143,Finance Analyst,Finance,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM144,Finance Analyst,Finance,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM145,Finance Analyst,Finance,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM146,Finance Analyst,Finance,Day 2,Request access to finance reporting systems,ERP System,Finance Access Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM147,Finance Analyst,Finance,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM148,Finance Analyst,Finance,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM149,Finance Analyst,Finance,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM150,Finance Analyst,Finance,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM151,Finance Analyst,Finance,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM152,Finance Analyst,Finance,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM153,Finance Analyst,Finance,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM154,Finance Analyst,Finance,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM155,Finance Analyst,Finance,Day 4,Review current financial reports and dashboards,Power BI,Finance Reporting Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM156,Finance Analyst,Finance,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM157,Finance Analyst,Finance,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM158,Finance Analyst,Finance,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM159,Finance Analyst,Finance,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM160,Finance Analyst,Finance,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM161,Sales Executive,Sales,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM162,Sales Executive,Sales,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM163,Sales Executive,Sales,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM164,Sales Executive,Sales,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM165,Sales Executive,Sales,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM166,Sales Executive,Sales,Day 2,Set up CRM account and sales tools,Salesforce,Sales Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM167,Sales Executive,Sales,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM168,Sales Executive,Sales,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM169,Sales Executive,Sales,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM170,Sales Executive,Sales,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM171,Sales Executive,Sales,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM172,Sales Executive,Sales,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM173,Sales Executive,Sales,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM174,Sales Executive,Sales,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM175,Sales Executive,Sales,Day 4,Review sales pipeline and assigned accounts,Salesforce,Sales Pipeline Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM176,Sales Executive,Sales,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM177,Sales Executive,Sales,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM178,Sales Executive,Sales,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM179,Sales Executive,Sales,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM180,Sales Executive,Sales,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
+FM181,Customer Support Specialist,Customer Support,Day 1,Complete employee profile and HR forms,HR Portal,Onboarding Guide,High,HR Team,30,None,Pending
+FM182,Customer Support Specialist,Customer Support,Day 1,Set up company email account,Microsoft Outlook,IT Setup Guide,High,IT Helpdesk,30,None,Pending
+FM183,Customer Support Specialist,Customer Support,Day 1,Join company communication channels,Microsoft Teams,Communication Guide,High,IT Helpdesk,20,None,Pending
+FM184,Customer Support Specialist,Customer Support,Day 1,Review employee handbook,Company Knowledge Base,Employee Handbook,Medium,HR Team,45,None,Pending
+FM185,Customer Support Specialist,Customer Support,Day 2,Set up role-specific workstation/software,IT Service Portal,Role Setup Guide,High,IT Helpdesk,60,Complete Day 1 core tasks,Pending
+FM186,Customer Support Specialist,Customer Support,Day 2,Set up support desk and customer communication tools,Zendesk,Support Setup Guide,High,IT Security,20,Complete Day 1 core tasks,Pending
+FM187,Customer Support Specialist,Customer Support,Day 2,Request required application access,IT Service Portal,Access Request Guide,High,IT Helpdesk,30,Complete Day 1 core tasks,Pending
+FM188,Customer Support Specialist,Customer Support,Day 2,Meet assigned manager,Microsoft Teams,Manager Introduction,Medium,Manager,30,Complete Day 1 core tasks,Pending
+FM189,Customer Support Specialist,Customer Support,Day 3,Complete information security training,Security Training Portal,Security Training,High,IT Security,45,Complete Day 2 core tasks,Pending
+FM190,Customer Support Specialist,Customer Support,Day 3,Review department workflow and responsibilities,Company Knowledge Base,Department Guide,Medium,Manager,45,Complete Day 2 core tasks,Pending
+FM191,Customer Support Specialist,Customer Support,Day 3,Meet onboarding buddy,Microsoft Teams,Buddy Introduction,Medium,Onboarding Buddy,30,Complete Day 2 core tasks,Pending
+FM192,Customer Support Specialist,Customer Support,Day 3,Complete role-specific learning module,Learning Management System,Role Learning Guide,Medium,Manager,60,Complete Day 2 core tasks,Pending
+FM193,Customer Support Specialist,Customer Support,Day 4,Access team documentation and shared resources,SharePoint,Documentation Guide,High,Team Lead,30,Complete Day 3 core tasks,Pending
+FM194,Customer Support Specialist,Customer Support,Day 4,Review current team projects,Project Management Tool,Project Overview,Medium,Team Lead,45,Complete Day 3 core tasks,Pending
+FM195,Customer Support Specialist,Customer Support,Day 4,Review support queue and knowledge base,Zendesk,Support Workflow Guide,High,Manager,60,Complete Day 3 core tasks,Pending
+FM196,Customer Support Specialist,Customer Support,Day 4,Attend department check-in,Microsoft Teams,Department Meeting Calendar,Medium,Manager,30,Complete Day 3 core tasks,Pending
+FM197,Customer Support Specialist,Customer Support,Day 5,Complete first-week onboarding checklist,Onboarding Portal,Checklist Guide,High,HR Team,20,Complete Day 4 core tasks,Pending
+FM198,Customer Support Specialist,Customer Support,Day 5,Review pending access requests,IT Service Portal,Access Status Guide,Medium,IT Helpdesk,20,Complete Day 4 core tasks,Pending
+FM199,Customer Support Specialist,Customer Support,Day 5,Discuss first-week progress with manager,Microsoft Teams,Weekly Check-in Guide,High,Manager,30,Complete Day 4 core tasks,Pending
+FM200,Customer Support Specialist,Customer Support,Day 5,Submit onboarding feedback,Onboarding Portal,Feedback Form,Medium,HR Team,15,Complete Day 4 core tasks,Pending
