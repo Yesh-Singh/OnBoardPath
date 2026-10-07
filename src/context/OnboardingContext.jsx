@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
+import React, { createContext, useContext, useState, useMemo, useEffect, useRef } from 'react';
 import { 
   INITIAL_PERSONAS, 
   INITIAL_NUDGES, 
@@ -10,6 +10,14 @@ import {
 } from '../data/mockData';
 import { getBestConversationResponse } from '../data/conversationDataset';
 import { getDailyDialogReply } from '../data/dailyDialogLoader';
+import { fetchServerState, pushStateValue } from '../services/stateApi';
+
+// Keys mirrored to the shared backend (/api/state → data/state.json) so state
+// syncs across browsers. localStorage remains as first-paint seed + offline cache.
+const PERSISTED_KEYS = [
+  'activePersonaId', 'personasTasks', 'nudges', 'handoffs',
+  'adminChatMessages', 'adminFiles', 'answerFeedback'
+];
 
 // Buddy handoff queue statuses
 export const HANDOFF_STATUSES = ['Open', 'In Progress', 'Resolved'];
@@ -305,12 +313,112 @@ export function OnboardingProvider({ children }) {
   // Q&A answer feedback (thumbs up / thumbs down), keyed by chat message id
   const [answerFeedback, setAnswerFeedback] = useState(() => readStoredValue('answerFeedback', {}));
 
+  // --- Shared backend sync -------------------------------------------------
+  // State is mirrored to the /api/state middleware (data/state.json) so every
+  // browser on this server shares one state; localStorage stays as first-paint
+  // seed + offline fallback. Declared before the effects that use them.
+  const persistedRef = useRef({});           // latest JSON-ready values
+  const pushedRef = useRef(new Map());       // key → last JSON the server acknowledged
+  const dirtyRef = useRef(new Set());        // keys with local changes not yet on the server
+  const hydratedRef = useRef(false);         // flips true after the initial server snapshot
+
+  const flushDirtyState = async () => {
+    if (dirtyRef.current.size === 0) return;
+    const keys = [...dirtyRef.current];
+    for (const key of keys) {
+      dirtyRef.current.delete(key);
+      const value = persistedRef.current[key];
+      const serialized = JSON.stringify(value);
+      const ok = await pushStateValue(key, value);
+      if (ok) pushedRef.current.set(key, serialized);
+      else dirtyRef.current.add(key); // server unreachable — retry on next tick
+      // If the value changed while the push was in flight it stays/becomes
+      // dirty (the persist effect re-added it), so it flushes next round.
+    }
+  };
+
   useEffect(() => {
     const values = { activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles: adminFiles.map(({ file, ...metadata }) => metadata), answerFeedback };
+    persistedRef.current = values;
     Object.entries(values).forEach(([key, value]) => {
-      try { localStorage.setItem(`onboardpath:${key}`, JSON.stringify(value)); } catch { /* Storage may be unavailable. */ }
+      const serialized = JSON.stringify(value);
+      try { localStorage.setItem(`onboardpath:${key}`, serialized); } catch { /* Storage may be unavailable. */ }
+      // Anything that differs from what the server last acknowledged is queued
+      // for the shared backend; the flush happens immediately once hydrated,
+      // or on the next poll tick (retrying failed pushes).
+      if (pushedRef.current.get(key) !== serialized) dirtyRef.current.add(key);
     });
+    if (hydratedRef.current) flushDirtyState();
   }, [activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles, answerFeedback]);
+
+  useEffect(() => {
+    let active = true;
+    let pollId = null;
+
+    // useState setters are stable, so capturing them in this effect is safe.
+    const syncSetters = {
+      activePersonaId: setActivePersonaId,
+      personasTasks: setPersonasTasks,
+      nudges: setNudges,
+      handoffs: setHandoffs,
+      adminChatMessages: setAdminChatMessages,
+      adminFiles: setAdminFiles,
+      answerFeedback: setAnswerFeedback
+    };
+
+    // Initial snapshot: the server wins over the local cache, so a browser
+    // with stale/empty localStorage adopts the shared state immediately.
+    const hydrate = (serverState) => {
+      PERSISTED_KEYS.forEach((key) => {
+        if (serverState[key] === undefined) return;
+        const serverJson = JSON.stringify(serverState[key]);
+        pushedRef.current.set(key, serverJson);
+        dirtyRef.current.delete(key);
+        if (serverJson !== JSON.stringify(persistedRef.current[key])) {
+          syncSetters[key]?.(serverState[key]);
+        }
+      });
+    };
+
+    const tick = async () => {
+      if (!active) return;
+      await flushDirtyState(); // retry failed pushes first
+      const serverState = await fetchServerState();
+      if (!active || !serverState) return;
+      PERSISTED_KEYS.forEach((key) => {
+        if (serverState[key] === undefined) return;
+        if (dirtyRef.current.has(key)) return; // pending local change — keep local
+        const serverJson = JSON.stringify(serverState[key]);
+        if (pushedRef.current.get(key) === serverJson) return; // unchanged
+        pushedRef.current.set(key, serverJson);
+        if (serverJson !== JSON.stringify(persistedRef.current[key])) {
+          syncSetters[key]?.(serverState[key]); // adopted from another browser
+        }
+      });
+    };
+
+    (async () => {
+      const serverState = await fetchServerState();
+      if (!active) return;
+      if (serverState && Object.keys(serverState).length > 0) {
+        hydrate(serverState);
+      }
+      // Seed the server when it has nothing yet (first run / restored backup):
+      // every key that the server never acknowledged stays dirty and flushes now.
+      PERSISTED_KEYS.forEach((key) => {
+        if (persistedRef.current[key] === undefined) return;
+        if (JSON.stringify(persistedRef.current[key]) !== pushedRef.current.get(key)) dirtyRef.current.add(key);
+      });
+      hydratedRef.current = true;
+      await flushDirtyState();
+      if (active) pollId = setInterval(tick, 4000);
+    })();
+
+    return () => {
+      active = false;
+      if (pollId) clearInterval(pollId);
+    };
+  }, []);
 
   // Active persona object
   const activePersona = useMemo(() => {

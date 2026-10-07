@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+# Runtime app state (shared backend persistence)
+data/
 *.local
 .env
 .env.*

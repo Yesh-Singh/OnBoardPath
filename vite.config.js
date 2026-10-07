@@ -1,6 +1,8 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import fs from 'node:fs'
+import path from 'node:path'
 
 // Try the newest model first, then fall back to older ones. Free-tier quota is
 // tracked per model, so exhausting one model's quota should not break the app.
@@ -228,6 +230,101 @@ const geminiAssistantPlugin = (apiKeys) => {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Shared state backend: a tiny JSON-file store exposed at /api/state so every
+// browser talking to this server sees the same app state (instead of each
+// browser keeping a private localStorage copy). Atomic writes via tmp+rename;
+// reads/writes are synchronous so a request can never observe a half-written
+// file. The client side lives in src/services/stateApi.js.
+const STATE_FILE = path.join(process.cwd(), 'data', 'state.json')
+const STATE_KEYS = new Set([
+  'activePersonaId',
+  'personasTasks',
+  'nudges',
+  'handoffs',
+  'adminChatMessages',
+  'adminFiles',
+  'answerFeedback'
+])
+
+const readStateFile = () => {
+  try {
+    return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'))
+  } catch {
+    return {} // First run — client seeds it from its local state.
+  }
+}
+
+const writeStateFile = (state) => {
+  fs.mkdirSync(path.dirname(STATE_FILE), { recursive: true })
+  const tmpFile = `${STATE_FILE}.tmp`
+  fs.writeFileSync(tmpFile, `${JSON.stringify(state, null, 2)}\n`)
+  fs.renameSync(tmpFile, STATE_FILE)
+}
+
+const appStatePlugin = () => {
+  const handleStateRequest = async (request, response) => {
+    response.setHeader('Content-Type', 'application/json')
+    response.setHeader('Cache-Control', 'no-store')
+
+    if (request.method === 'GET') {
+      response.end(JSON.stringify({ ok: true, state: readStateFile() }))
+      return
+    }
+
+    if (request.method !== 'PUT') {
+      response.statusCode = 405
+      response.setHeader('Allow', 'GET, PUT')
+      response.end(JSON.stringify({ ok: false, error: 'Method not allowed' }))
+      return
+    }
+
+    let body = ''
+    for await (const chunk of request) body += chunk
+    if (body.length > 2000000) {
+      response.statusCode = 413
+      response.end(JSON.stringify({ ok: false, error: 'Payload too large' }))
+      return
+    }
+
+    let payload
+    try {
+      payload = JSON.parse(body)
+    } catch {
+      response.statusCode = 400
+      response.end(JSON.stringify({ ok: false, error: 'Invalid JSON' }))
+      return
+    }
+
+    const { key, value } = payload || {}
+    if (!STATE_KEYS.has(key) || value === undefined) {
+      response.statusCode = 400
+      response.end(JSON.stringify({ ok: false, error: 'Unknown key or missing value' }))
+      return
+    }
+
+    const state = readStateFile()
+    state[key] = value
+    writeStateFile(state)
+    response.end(JSON.stringify({ ok: true, key }))
+  }
+
+  const register = (server) => {
+    server.middlewares.use('/api/state', (request, response) => {
+      handleStateRequest(request, response).catch(() => {
+        response.statusCode = 500
+        response.end(JSON.stringify({ ok: false, error: 'State write failed' }))
+      })
+    })
+  }
+
+  return {
+    name: 'onboardpath-app-state',
+    configureServer: register,
+    configurePreviewServer: register
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -241,6 +338,6 @@ export default defineConfig(({ mode }) => {
     .filter(Boolean)
 
   return {
-    plugins: [react(), tailwindcss(), geminiAssistantPlugin(apiKeys)],
+    plugins: [react(), tailwindcss(), geminiAssistantPlugin(apiKeys), appStatePlugin()],
   }
 })
