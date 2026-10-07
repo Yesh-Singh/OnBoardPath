@@ -129,3 +129,72 @@ main .space-y-2 > *:nth-child(4) { animation-delay: 135ms; }
 .animate-pulse-subtle {
   animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* Chat bubbles glide in as they arrive */
+@keyframes msg-enter {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.anim-msg {
+  animation: msg-enter 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Numbers and badges pop whenever their value changes */
+@keyframes value-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.anim-pop {
+  animation: value-pop 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Typing indicator: three bouncing dots */
+@keyframes dot-bounce {
+  0%, 70%, 100% { transform: translateY(0); opacity: 0.35; }
+  35% { transform: translateY(-4px); opacity: 1; }
+}
+
+.chat-dots span:nth-child(1) { animation: dot-bounce 1.1s infinite ease-in-out; }
+.chat-dots span:nth-child(2) { animation: dot-bounce 1.1s infinite ease-in-out 0.15s; }
+.chat-dots span:nth-child(3) { animation: dot-bounce 1.1s infinite ease-in-out 0.3s; }
+
+/* Staggered entrance for handoff queue cards (wins over main .enterprise-card) */
+main .queue-grid > * {
+  animation: page-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+main .queue-grid > *:nth-child(2) { animation-delay: 70ms; }
+main .queue-grid > *:nth-child(3) { animation-delay: 140ms; }
+main .queue-grid > *:nth-child(4) { animation-delay: 210ms; }
+main .queue-grid > *:nth-child(5) { animation-delay: 280ms; }
+main .queue-grid > *:nth-child(6) { animation-delay: 350ms; }
+
+/* Primary action buttons lift with a soft glow */
+.btn-lift {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.btn-lift:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px -10px rgba(79, 70, 229, 0.55);
+}
+
+.btn-lift:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Thumbs up/down feedback buttons nudge upward on hover */
+.thumb-btn {
+  transition: transform 160ms ease, color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.thumb-btn:hover {
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* Progress bars ease to their new width instead of jumping */
+.progress-fill {
+  transition: width 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}

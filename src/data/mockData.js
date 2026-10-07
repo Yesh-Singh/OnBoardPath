@@ -520,6 +520,36 @@ export const MOCK_QA_DATABASE = [
       title: 'Office Orientation Guide',
       section: 'Campus Facilities'
     }
+  },
+  {
+    keywords: ['vpn', 'remote access', 'globalprotect', 'work from home', 'from home'],
+    question: 'How do I connect to the VPN from home?',
+    answer: 'Install GlobalProtect VPN and select the nearest gateway (India-South for Bengaluru/Gurugram) to reach internal subnets, repositories, and staging servers from outside campus. Sign in with your @onboardpath.corp credentials — the same ones you use for email.',
+    citation: {
+      sourceId: 'src-1',
+      title: 'IT Setup Guide',
+      section: 'VPN & Remote Access'
+    }
+  },
+  {
+    keywords: ['dev environment', 'local environment', 'local dev', 'docker', 'git', 'code review', 'pull request', 'sprint', 'repository'],
+    question: 'How do I set up my local dev environment?',
+    answer: 'The Engineering Playbook has you covered: clone the eng-sandbox repository, run the setup script to pull local Docker containers for PostgreSQL and Redis, and make sure Node 22+ and Docker Desktop are running. For day-to-day work, PRs need 2 peer approvals and green CI before merging to main.',
+    citation: {
+      sourceId: 'src-4',
+      title: 'Engineering Playbook',
+      section: 'Local Environment Setup'
+    }
+  },
+  {
+    keywords: ['escalate', 'escalation', 'blocked', 'stuck', 'handoff', 'hand off'],
+    question: 'How do I escalate a blocked task?',
+    answer: 'If a task is blocked, escalate it through the Buddy Handoff queue: open the Handoff tab, find the task, and start progress — it moves to In Progress so your buddy and admins can see it. Track it there until someone marks it Resolved, and watch the sidebar badge for how many are still open.',
+    citation: {
+      sourceId: 'src-1',
+      title: 'Buddy Program Playbook',
+      section: 'Escalation Path'
+    }
   }
 ];
 

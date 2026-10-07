@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useOnboarding } from '../context/OnboardingContext';
+import { useOnboarding, normalizeHandoffStatus } from '../context/OnboardingContext';
 import { 
   Compass, 
   CheckSquare, 
@@ -21,7 +21,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
   const { activePersona, nudges, handoffs, selectPersona } = useOnboarding();
 
   const activeNudgeCount = nudges.filter(n => n.status === 'Active').length;
-  const openHandoffCount = handoffs.filter(h => h.status === 'Open').length;
+  const openHandoffCount = handoffs.filter(h => normalizeHandoffStatus(h.status) !== 'Resolved').length;
 
   const navItems = [
     { label: 'Home', path: '/dashboard', icon: Compass },
@@ -134,7 +134,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
                   </div>
 
                   {item.badge && (
-                    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${item.badgeColor}`}>
+                    <span key={item.badge} className={`px-2 py-0.5 rounded-full text-[10px] font-bold anim-pop ${item.badgeColor}`}>
                       {item.badge}
                     </span>
                   )}

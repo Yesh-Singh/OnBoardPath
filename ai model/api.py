@@ -16,7 +16,8 @@ model = tf.keras.models.load_model(MODEL_PATH)
 app = FastAPI(title="OnboardPath AI Model", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    # Local demo server: accept any dev-port origin (5173-5176, preview frames).
+    allow_origins=["*"],
     allow_credentials=False,
     allow_methods=["POST", "GET"],
     allow_headers=["Content-Type"],

@@ -1,14 +1,32 @@
-import React from 'react';
-import { useOnboarding } from '../context/OnboardingContext';
-import HandoffCard from '../components/HandoffCard';
+import React, { useState } from 'react';
+import { useOnboarding, normalizeHandoffStatus, HANDOFF_STATUSES } from '../context/OnboardingContext';
+import HandoffCard, { HandoffStatusBadge } from '../components/HandoffCard';
 import EmptyState from '../components/EmptyState';
 import SafetyPills from '../components/SafetyPill';
-import { UserCheck, ShieldCheck, AlertTriangle, Plus, Lock, Inbox } from 'lucide-react';
+import { UserCheck, ShieldCheck, AlertTriangle, Plus, Lock, Inbox, ListChecks } from 'lucide-react';
+
+const STATUS_FILTERS = ['All', ...HANDOFF_STATUSES];
+const STATUS_ORDER = { Open: 0, 'In Progress': 1, Resolved: 2 };
+const STATUS_COPY = {
+  Open: 'Waiting for a buddy response',
+  'In Progress': 'Being worked on right now',
+  Resolved: 'Closed out successfully'
+};
 
 export default function BuddyHandoffPage() {
   const { handoffs, setIsHandoffModalOpen, activePersona } = useOnboarding();
+  const [statusFilter, setStatusFilter] = useState('All');
 
   const activeHandoffs = handoffs.filter(h => h.personaId === activePersona.id || h.personaId === 'aanya');
+
+  const counts = HANDOFF_STATUSES.reduce((acc, status) => {
+    acc[status] = activeHandoffs.filter(h => normalizeHandoffStatus(h.status) === status).length;
+    return acc;
+  }, {});
+
+  const visibleHandoffs = activeHandoffs
+    .filter(h => statusFilter === 'All' || normalizeHandoffStatus(h.status) === statusFilter)
+    .sort((a, b) => STATUS_ORDER[normalizeHandoffStatus(a.status)] - STATUS_ORDER[normalizeHandoffStatus(b.status)]);
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
@@ -26,7 +44,7 @@ export default function BuddyHandoffPage() {
 
         <button
           onClick={() => setIsHandoffModalOpen(true)}
-          className="px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all shadow-xs self-start md:self-center"
+          className="btn-lift px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-semibold flex items-center gap-2 shadow-xs self-start md:self-center"
         >
           <Plus className="w-4 h-4" />
           <span>Create handoff</span>
@@ -68,18 +86,66 @@ export default function BuddyHandoffPage() {
 
         <button
           onClick={() => setIsHandoffModalOpen(true)}
-          className="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-semibold flex items-center gap-2 transition-all shadow-xs shrink-0"
+          className="btn-lift px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-semibold flex items-center gap-2 shadow-xs shrink-0"
         >
           <UserCheck className="w-4 h-4" />
           <span>Create handoff</span>
         </button>
       </div>
 
-      {/* Open Handoffs List */}
+      {/* Handoff queue status overview */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {HANDOFF_STATUSES.map(status => (
+          <button
+            key={status}
+            type="button"
+            onClick={() => setStatusFilter(status)}
+            className={`enterprise-card p-4 bg-white text-left transition-all border-l-4 ${
+              statusFilter === status
+                ? status === 'Open'
+                  ? 'border-l-amber-500 ring-2 ring-amber-200'
+                  : status === 'In Progress'
+                  ? 'border-l-blue-500 ring-2 ring-blue-200'
+                  : 'border-l-emerald-500 ring-2 ring-emerald-200'
+                : 'border-l-slate-200 hover:border-l-slate-300'
+            }`}
+          >
+            <div className="flex items-center justify-between">
+              <HandoffStatusBadge status={status} />
+              <span key={counts[status]} className="text-2xl font-extrabold text-slate-900 anim-pop">{counts[status]}</span>
+            </div>
+            <p className="text-xs text-slate-500 mt-2">{STATUS_COPY[status]}</p>
+          </button>
+        ))}
+      </div>
+
+      {/* Queue status filter tabs */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mr-1">Queue view:</span>
+        {STATUS_FILTERS.map(filter => (
+          <button
+            key={filter}
+            type="button"
+            onClick={() => setStatusFilter(filter)}
+            className={`px-3 py-1.5 rounded-full text-[11px] font-semibold border transition-all ${
+              statusFilter === filter
+                ? 'bg-slate-900 text-white border-slate-900'
+                : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400'
+            }`}
+          >
+            {filter}
+            <span className="ml-1.5 opacity-70">
+              {filter === 'All' ? activeHandoffs.length : counts[filter]}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {/* Handoff Queue List */}
       <div>
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">
-            Active Escalation Log ({activeHandoffs.length})
+            Handoff Queue ({visibleHandoffs.length}{statusFilter !== 'All' ? ` of ${activeHandoffs.length}` : ''})
           </h3>
           {/* Trust note */}
           <div className="text-xs text-slate-500 font-medium flex items-center gap-1">
@@ -89,11 +155,19 @@ export default function BuddyHandoffPage() {
         </div>
 
         {activeHandoffs.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {activeHandoffs.map((handoff) => (
-              <HandoffCard key={handoff.id} handoff={handoff} />
-            ))}
-          </div>
+          visibleHandoffs.length > 0 ? (
+            <div key={statusFilter} className="queue-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+              {visibleHandoffs.map((handoff) => (
+                <HandoffCard key={handoff.id} handoff={handoff} />
+              ))}
+            </div>
+          ) : (
+            <div className="enterprise-card p-8 bg-white text-center">
+              <ListChecks className="w-7 h-7 text-slate-300 mx-auto mb-2" />
+              <p className="text-sm font-semibold text-slate-700">No {statusFilter.toLowerCase()} handoffs</p>
+              <p className="text-xs text-slate-500 mt-1">Pick another queue view above to see your other handoffs.</p>
+            </div>
+          )
         ) : (
           <EmptyState
             title="No open handoffs"

@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
-import { useOnboarding } from '../context/OnboardingContext';
-import { UserCheck, ShieldCheck, Clock, CheckCircle2, AlertCircle, Trash2, Send } from 'lucide-react';
+import { useOnboarding, normalizeHandoffStatus, HANDOFF_STATUS_STYLES, HANDOFF_STATUS_DOTS } from '../context/OnboardingContext';
+import { UserCheck, ShieldCheck, Clock, CheckCircle2, AlertCircle, Trash2, Send, PlayCircle, CheckCircle, RotateCcw } from 'lucide-react';
+
+export function HandoffStatusBadge({ status, className = '' }) {
+  const normalized = normalizeHandoffStatus(status);
+  return (
+    <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border text-[10px] font-bold uppercase tracking-wider anim-pop ${HANDOFF_STATUS_STYLES[normalized]} ${className}`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${HANDOFF_STATUS_DOTS[normalized]}`} />
+      {normalized}
+    </span>
+  );
+}
 
 export default function HandoffCard({ handoff }) {
-  const { escalateHandoff, replyToHandoff, removeHandoff } = useOnboarding();
+  const { escalateHandoff, replyToHandoff, removeHandoff, updateHandoffStatus } = useOnboarding();
   const [message, setMessage] = useState('');
+  const status = normalizeHandoffStatus(handoff.status);
   const currentLevel = handoff.escalationLevel || 1;
   const escalationPath = handoff.escalationPath || [];
   const canEscalate = escalationPath.length > 0 && currentLevel < escalationPath.length;
@@ -21,6 +32,7 @@ export default function HandoffCard({ handoff }) {
             Category: {handoff.category}
           </h4>
         </div>
+        <HandoffStatusBadge key={status} status={status} />
       </div>
 
       <div className="space-y-2 text-xs text-slate-600 my-3">
@@ -35,6 +47,40 @@ export default function HandoffCard({ handoff }) {
         <div className="text-[11px] text-purple-700 font-semibold">
           Escalation level {currentLevel}{escalationPath.length ? ` of ${escalationPath.length}` : ''}
         </div>
+      </div>
+
+      {/* Queue status actions */}
+      <div className="flex flex-wrap items-center gap-2">
+        {status === 'Open' && (
+          <button
+            type="button"
+            onClick={() => updateHandoffStatus(handoff.id, 'In Progress')}
+            className="btn-lift px-3 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-[11px] font-semibold rounded-lg hover:bg-blue-100 flex items-center gap-1.5"
+          >
+            <PlayCircle className="w-3.5 h-3.5" />
+            Start progress
+          </button>
+        )}
+        {status === 'In Progress' && (
+          <button
+            type="button"
+            onClick={() => updateHandoffStatus(handoff.id, 'Resolved')}
+            className="btn-lift px-3 py-1.5 bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold rounded-lg hover:bg-emerald-100 flex items-center gap-1.5"
+          >
+            <CheckCircle className="w-3.5 h-3.5" />
+            Mark resolved
+          </button>
+        )}
+        {status === 'Resolved' && (
+          <button
+            type="button"
+            onClick={() => updateHandoffStatus(handoff.id, 'Open')}
+            className="btn-lift px-3 py-1.5 bg-slate-50 border border-slate-200 text-slate-600 text-[11px] font-semibold rounded-lg hover:bg-slate-100 flex items-center gap-1.5"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            Reopen handoff
+          </button>
+        )}
       </div>
 
       {canEscalate && (

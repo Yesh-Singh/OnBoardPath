@@ -2,34 +2,120 @@ import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-const geminiAssistantPlugin = (apiKey) => {
-  const requestGemini = async (prompt, maxOutputTokens = 512) => {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${encodeURIComponent(apiKey)}`
-    const retryableStatuses = new Set([429, 500, 502, 503, 504])
+// Try the newest model first, then fall back to older ones. Free-tier quota is
+// tracked per model, so exhausting one model's quota should not break the app.
+const GEMINI_MODELS = ['gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash', 'gemini-3.5-flash-lite']
 
-    for (let attempt = 0; attempt < 3; attempt += 1) {
-      const controller = new AbortController()
-      const timeout = setTimeout(() => controller.abort(), 20000)
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: prompt }] }],
-            generationConfig: { maxOutputTokens }
-          }),
-          signal: controller.signal
-        })
-        if (response.ok || !retryableStatuses.has(response.status) || attempt === 2) {
-          return response
+const geminiAssistantPlugin = (apiKeys) => {
+  // Index of the model that answered successfully most recently.
+  let preferredModel = 0
+  // Index of the key that answered successfully most recently.
+  let preferredKey = 0
+
+  // Runs the model fallback chain against a single key. Returns
+  // { response, rotateKey }; rotateKey: true means the key itself is the
+  // problem (invalid key or account-wide quota) and the caller should retry
+  // with the next key.
+  const requestWithKey = async (key, prompt, maxOutputTokens) => {
+    const retryableStatuses = new Set([500, 502, 503, 504])
+    const modelOrder = [
+      ...GEMINI_MODELS.slice(preferredModel),
+      ...GEMINI_MODELS.slice(0, preferredModel)
+    ]
+    let lastResponse = null
+    let sawQuotaError = false
+
+    for (const model of modelOrder) {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`
+
+      for (let attempt = 0; attempt < 3; attempt += 1) {
+        const controller = new AbortController()
+        const timeout = setTimeout(() => controller.abort(), 20000)
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: { maxOutputTokens }
+            }),
+            signal: controller.signal
+          })
+
+          if (response.ok) {
+            preferredModel = GEMINI_MODELS.indexOf(model)
+            return { response, rotateKey: false }
+          }
+
+          // Key-level failures: an invalid/revoked key fails identically for
+          // every model, so switch keys immediately instead of burning the list.
+          // Google reports a bad key as 400 API_KEY_INVALID (not 401).
+          if (response.status === 401 || response.status === 403) {
+            return { response, rotateKey: true }
+          }
+          if (response.status === 400) {
+            let reason = ''
+            try {
+              const body = await response.clone().json()
+              reason = body?.error?.details?.[0]?.reason || ''
+            } catch {
+              // Not a JSON body: treat as an ordinary client error.
+            }
+            if (reason === 'API_KEY_INVALID') return { response, rotateKey: true }
+          }
+
+          if (response.status === 429) sawQuotaError = true
+
+          if (!retryableStatuses.has(response.status)) {
+            // 404 (retired model) or 429 (quota exhausted): move to the next model.
+            // Any other status is unrelated to the key and fails for every model.
+            if (response.status !== 404 && response.status !== 429) return { response, rotateKey: false }
+            lastResponse = response
+            break
+          }
+
+          lastResponse = response
+          if (attempt === 2) break
+        } catch (error) {
+          if (attempt === 2) throw error
+        } finally {
+          clearTimeout(timeout)
         }
-      } catch (error) {
-        if (attempt === 2) throw error
-      } finally {
-        clearTimeout(timeout)
+        await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)))
       }
-      await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)))
     }
+
+    // Every model failed. Rotate keys only when quota errors suggest the key's
+    // account is the bottleneck (a second key has its own separate quota).
+    return { response: lastResponse, rotateKey: Boolean(lastResponse && sawQuotaError) }
+  }
+
+  const requestGemini = async (prompt, maxOutputTokens = 512) => {
+    let lastResponse = null
+    let lastError = null
+
+    for (let attempt = 0; attempt < apiKeys.length; attempt += 1) {
+      const keyIndex = (preferredKey + attempt) % apiKeys.length
+      let outcome
+      try {
+        outcome = await requestWithKey(apiKeys[keyIndex], prompt, maxOutputTokens)
+      } catch (error) {
+        // Network/timeout error on this key: still give the backup key a shot.
+        lastError = error
+        continue
+      }
+
+      const { response, rotateKey } = outcome
+      if (response?.ok) {
+        preferredKey = keyIndex // remember the key that worked for next time
+        return response
+      }
+      if (response && !rotateKey) return response
+      if (response) lastResponse = response
+    }
+
+    if (lastResponse) return lastResponse
+    if (lastError) throw lastError
     throw new Error('Gemini request exhausted retries')
   }
 
@@ -44,7 +130,7 @@ const geminiAssistantPlugin = (apiKey) => {
       return
     }
 
-    if (!apiKey) {
+    if (apiKeys.length === 0) {
       response.statusCode = 503
       response.end(JSON.stringify({ status: 'not_configured', message: 'Gemini API key is not configured' }))
       return
@@ -57,7 +143,7 @@ const geminiAssistantPlugin = (apiKey) => {
         response.end(JSON.stringify({ status: 'unavailable', message: 'Gemini chat completion failed' }))
         return
       }
-      response.end(JSON.stringify({ status: 'working', message: 'Gemini API key is working' }))
+      response.end(JSON.stringify({ status: 'working', message: 'Gemini API key is working', keysConfigured: apiKeys.length }))
     } catch {
       response.statusCode = 502
       response.end(JSON.stringify({ status: 'unavailable', message: 'Gemini could not be reached' }))
@@ -99,7 +185,7 @@ const geminiAssistantPlugin = (apiKey) => {
       return
     }
 
-    if (!apiKey) {
+    if (apiKeys.length === 0) {
       response.statusCode = 503
       response.end(JSON.stringify({ error: 'Gemini is not configured' }))
       return
@@ -144,9 +230,17 @@ const geminiAssistantPlugin = (apiKey) => {
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
-  const { GEMINI_API_KEY } = loadEnv(mode, process.cwd(), '')
+  const env = loadEnv(mode, process.cwd(), '')
+
+  // Primary key, optional backup key(s). Each variable may also hold a
+  // comma-separated list, and every key needs its own quota, so the backup
+  // should come from a different Google account.
+  const apiKeys = `${env.GEMINI_API_KEY || ''},${env.GEMINI_API_KEY_BACKUP || ''}`
+    .split(',')
+    .map(key => key.trim())
+    .filter(Boolean)
 
   return {
-    plugins: [react(), tailwindcss(), geminiAssistantPlugin(GEMINI_API_KEY)],
+    plugins: [react(), tailwindcss(), geminiAssistantPlugin(apiKeys)],
   }
 })

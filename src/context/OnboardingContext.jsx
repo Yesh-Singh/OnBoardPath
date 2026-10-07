@@ -11,6 +11,27 @@ import {
 import { getBestConversationResponse } from '../data/conversationDataset';
 import { getDailyDialogReply } from '../data/dailyDialogLoader';
 
+// Buddy handoff queue statuses
+export const HANDOFF_STATUSES = ['Open', 'In Progress', 'Resolved'];
+
+export const normalizeHandoffStatus = (status) => {
+  if (HANDOFF_STATUSES.includes(status)) return status;
+  // Older stored handoffs used 'Escalated'; treat them as being worked on.
+  return status === 'Escalated' ? 'In Progress' : 'Open';
+};
+
+export const HANDOFF_STATUS_STYLES = {
+  Open: 'bg-amber-50 text-amber-700 border-amber-200',
+  'In Progress': 'bg-blue-50 text-blue-700 border-blue-200',
+  Resolved: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+};
+
+export const HANDOFF_STATUS_DOTS = {
+  Open: 'bg-amber-500',
+  'In Progress': 'bg-blue-500 animate-pulse',
+  Resolved: 'bg-emerald-500'
+};
+
 const readStoredValue = (key, fallback) => {
   try {
     const stored = localStorage.getItem(`onboardpath:${key}`);
@@ -24,7 +45,22 @@ const GENERAL_CHAT_PATTERNS = [
   'hello', 'hi', 'hey', 'how are you', 'what are you doing',
   'who are you', 'what can you do', 'tell me about yourself',
   'thanks', 'thank you', 'good morning', 'good evening',
-  'how is it going', 'what do you do', 'how are you doing'
+  'how is it going', 'what do you do', 'how are you doing',
+  'how is your day', 'how was your day', 'how is your life',
+  'how do you feel', 'are you okay', 'are you fine',
+  'enjoy', 'enjoying', 'are you enjoying'
+];
+
+const GENERAL_CHAT_REGEXES = [
+  /\bhow\s+(is|was)\s+(your|ur)\s+day\b/i,
+  /\bhow\s+(are|r)\s+(you|u)\b/i,
+  /\bhow'?s\s+it\s+going\b/i,
+  /\bwhat'?s\s+up\b/i,
+  /\bhello\b|\bhi\b|\bhey\b/i,
+  /\bgood\s+(morning|afternoon|evening|night)\b/i,
+  /\b(thanks|thank you)\b/i,
+  /\b(enjoy|enjoying)\b/i,
+  /\bare\s+(you|u)\s+enjoying\b/i
 ];
 
 const getPersonaTone = (persona) => {
@@ -74,8 +110,29 @@ const DEFAULT_CONVERSATION_REPLIES = [
 
 const isGeneralConversation = (queryText) => {
   const clean = queryText.toLowerCase().trim();
-  return GENERAL_CHAT_PATTERNS.some(pattern => clean.includes(pattern));
+  return GENERAL_CHAT_PATTERNS.some(pattern => clean.includes(pattern))
+    || GENERAL_CHAT_REGEXES.some(pattern => pattern.test(clean));
 };
+
+const ONBOARDING_WORK_TERMS = [
+  'onboarding', 'first week', 'checklist', 'task', 'tasks', 'today',
+  'laptop', 'email', 'mfa', 'security', 'password', 'phishing', 'vpn',
+  'office', 'orientation', 'badge', 'buddy', 'manager', 'source',
+  'guide', 'policy', 'setup', 'tools', 'software', 'access', 'hr',
+  'document', 'documents', 'payroll', 'salary', 'bonus', 'benefits',
+  'leave', 'compensation', 'work', 'role', 'team', 'department'
+];
+
+const shouldRefocusOnOnboarding = (queryText) => {
+  const clean = queryText.toLowerCase().trim();
+  if (!clean) return false;
+  const hasWorkContext = ONBOARDING_WORK_TERMS.some(term => clean.includes(term));
+  return isGeneralConversation(clean) && !hasWorkContext;
+};
+
+const getRefocusReply = (persona) => (
+  `Let's keep this focused on your onboarding work. Ask me only the necessary questions about setup, checklist tasks, approved sources, security, office guidance, or your buddy handoff. For example, you can ask what to complete next or how to set up your laptop and email.`
+);
 
 const isToolsQuery = (queryText) => {
   if (/^\s*tools?\s*[?.!]*\s*$/i.test(queryText)) return true;
@@ -245,12 +302,15 @@ export function OnboardingProvider({ children }) {
   ]));
   const [adminFiles, setAdminFiles] = useState(() => readStoredValue('adminFiles', []));
 
+  // Q&A answer feedback (thumbs up / thumbs down), keyed by chat message id
+  const [answerFeedback, setAnswerFeedback] = useState(() => readStoredValue('answerFeedback', {}));
+
   useEffect(() => {
-    const values = { activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles: adminFiles.map(({ file, ...metadata }) => metadata) };
+    const values = { activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles: adminFiles.map(({ file, ...metadata }) => metadata), answerFeedback };
     Object.entries(values).forEach(([key, value]) => {
       try { localStorage.setItem(`onboardpath:${key}`, JSON.stringify(value)); } catch { /* Storage may be unavailable. */ }
     });
-  }, [activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles]);
+  }, [activePersonaId, personasTasks, nudges, handoffs, adminChatMessages, adminFiles, answerFeedback]);
 
   // Active persona object
   const activePersona = useMemo(() => {
@@ -451,6 +511,39 @@ export function OnboardingProvider({ children }) {
     addToast('Handoff removed', 'info');
   };
 
+  // Move a handoff through the queue: Open -> In Progress -> Resolved
+  const updateHandoffStatus = (handoffId, status) => {
+    if (!HANDOFF_STATUSES.includes(status)) return;
+    const target = handoffs.find(handoff => handoff.id === handoffId);
+    setHandoffs(prev => prev.map(handoff => handoff.id === handoffId ? { ...handoff, status } : handoff));
+    addToast(
+      `Handoff${target ? ` "${target.category}"` : ''} marked as ${status}`,
+      status === 'Resolved' ? 'success' : 'info'
+    );
+  };
+
+  // Capture thumbs up/down after each Q&A answer so onboarding content can improve over time
+  const submitAnswerFeedback = (messageId, rating, meta = {}) => {
+    if (!messageId || !['up', 'down'].includes(rating)) return;
+    setAnswerFeedback(prev => ({
+      ...prev,
+      [messageId]: {
+        rating,
+        question: (meta.question || '').slice(0, 300),
+        answer: (meta.answer || '').slice(0, 400),
+        source: meta.source || null,
+        personaId: meta.personaId || activePersonaId,
+        createdAt: 'Just now'
+      }
+    }));
+    addToast(
+      rating === 'up'
+        ? 'Thanks! Glad this answer helped.'
+        : 'Thanks — we\u2019ll use this to improve onboarding content.',
+      rating === 'up' ? 'success' : 'info'
+    );
+  };
+
   const escalateHandoff = (handoffId) => {
     const handoff = handoffs.find(item => item.id === handoffId);
     if (!handoff) return;
@@ -466,7 +559,7 @@ export function OnboardingProvider({ children }) {
         ...handoff,
         assignedTo: path[nextLevel - 1],
         escalationLevel: nextLevel,
-        status: 'Escalated'
+        status: handoff.status === 'Resolved' ? 'Resolved' : 'In Progress'
       };
     }));
   };
@@ -497,6 +590,15 @@ export function OnboardingProvider({ children }) {
       return {
         isSensitive: true,
         answer: "This topic may require help from a human. OnboardPath enforces privacy rules around sensitive HR, payroll, or compensation inquiries.",
+        citation: null
+      };
+    }
+
+    // Keep casual or off-topic chat out of the grounded onboarding flow.
+    if (shouldRefocusOnOnboarding(cleanQuery)) {
+      return {
+        isSensitive: false,
+        answer: getRefocusReply(activePersona),
         citation: null
       };
     }
@@ -635,6 +737,9 @@ export function OnboardingProvider({ children }) {
     escalateHandoff,
     replyToHandoff,
     removeHandoff,
+    updateHandoffStatus,
+    answerFeedback,
+    submitAnswerFeedback,
     addToast,
     removeToast,
     processAssistantQuery,

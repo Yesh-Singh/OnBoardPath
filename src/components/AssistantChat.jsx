@@ -9,7 +9,9 @@ import {
   HelpCircle, 
   Bot,
   User,
-  RotateCcw
+  RotateCcw,
+  ThumbsUp,
+  ThumbsDown
 } from 'lucide-react';
 import CitationCard from './CitationCard';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -19,13 +21,13 @@ export default function AssistantChat() {
   const [searchParams] = useSearchParams();
   const initialQuery = searchParams.get('q');
 
-  const { processAssistantQuery, setIsHandoffModalOpen, activePersona } = useOnboarding();
+  const { processAssistantQuery, setIsHandoffModalOpen, activePersona, submitAnswerFeedback, answerFeedback } = useOnboarding();
 
   const [messages, setMessages] = useState([
     {
       id: 1,
       sender: 'assistant',
-      text: `Hi ${activePersona.name.split(' ')[0]} — I’m doing great today, thanks for asking. I’m here to help with your onboarding and answer any questions you have. How can I help you today?`,
+      text: `Hi ${activePersona.name.split(' ')[0]} — I’m here to help with your onboarding work. Ask me about setup, checklist tasks, approved sources, security, office guidance, or buddy handoff.`,
       citation: null,
       isSensitive: false
     }
@@ -41,7 +43,7 @@ export default function AssistantChat() {
     setMessages([{
       id: Date.now(),
       sender: 'assistant',
-      text: `Hi ${activePersona.name.split(' ')[0]} — I’m doing great today, thanks for asking. I’m here to help with your onboarding and answer any questions you have. How can I help you today?`,
+      text: `Hi ${activePersona.name.split(' ')[0]} — I’m here to help with your onboarding work. Ask me about setup, checklist tasks, approved sources, security, office guidance, or buddy handoff.`,
       citation: null,
       isSensitive: false
     }]);
@@ -51,11 +53,20 @@ export default function AssistantChat() {
   };
 
   const suggestedQuestions = [
+    // Setup & IT
     'How do I set up my laptop and company email?',
+    'How do I connect to the VPN from home?',
+    'How do I set up my local dev environment?',
+    // Security & compliance
     'Where can I find security guidelines?',
+    'How do I report a phishing attempt?',
+    'Where can I find HR documents?',
+    // People & day-to-day
     'Who is my onboarding buddy?',
     'What should I complete today?',
     'Where is the office orientation information?',
+    // Escalation
+    'How do I escalate a blocked task?',
     'What is my salary & bonus breakdown?' // Sensitive topic test!
   ];
 
@@ -65,7 +76,7 @@ export default function AssistantChat() {
 
     // Add User Message
     const userMsg = {
-      id: Date.now(),
+      id: `user-${Date.now()}`,
       sender: 'user',
       text: query,
       citation: null,
@@ -83,7 +94,7 @@ export default function AssistantChat() {
         conversationHistory: messages
       });
       const assistantMsg = {
-        id: Date.now() + 1,
+        id: `assistant-${Date.now()}`,
         sender: 'assistant',
         text: result.answer,
         citation: result.citation,
@@ -127,7 +138,7 @@ export default function AssistantChat() {
               Ask OnboardPath
             </h3>
             <p className="text-[11px] text-slate-300">
-              Answers use approved sources and a natural conversational fallback.
+              Answers stay focused on approved onboarding sources and necessary work questions.
             </p>
           </div>
         </div>
@@ -189,12 +200,20 @@ export default function AssistantChat() {
 
       {/* Messages Scroll View */}
       <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-slate-50/50">
-        {messages.map((msg) => {
+        {messages.map((msg, msgIndex) => {
           const isUser = msg.sender === 'user';
+          const prevUserMsg = messages.slice(0, msgIndex).reverse().find(item => item.sender === 'user');
+          const myFeedback = answerFeedback[msg.id];
+          const recordFeedback = (rating) => submitAnswerFeedback(msg.id, rating, {
+            question: prevUserMsg ? prevUserMsg.text : '',
+            answer: msg.text,
+            source: msg.citation ? msg.citation.title : null,
+            personaId: activePersona.id
+          });
           return (
             <div
               key={msg.id}
-              className={`flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`}
+              className={`flex items-start gap-3 anim-msg ${isUser ? 'flex-row-reverse' : ''}`}
             >
               {/* Avatar */}
               <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
@@ -246,15 +265,56 @@ export default function AssistantChat() {
                     <CitationCard citation={msg.citation} />
                   )}
                 </div>
+
+                {/* Feedback After Each Answer */}
+                {!isUser && prevUserMsg && (
+                  <div key={myFeedback ? myFeedback.rating : 'unrated'} className="mt-1.5 flex items-center gap-1.5 text-[11px] anim-msg">
+                    <span className={`font-medium ${myFeedback ? 'text-emerald-600 anim-pop' : 'text-slate-400'}`}>
+                      {myFeedback
+                        ? 'Thanks for your feedback!'
+                        : 'Was this helpful?'}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => recordFeedback('up')}
+                      aria-label="This answer was helpful"
+                      title="Helpful"
+                      className={`thumb-btn p-1.5 rounded-lg border ${
+                        myFeedback && myFeedback.rating === 'up'
+                          ? 'bg-emerald-50 border-emerald-300 text-emerald-600 anim-pop'
+                          : 'bg-white border-slate-200 text-slate-400 hover:border-emerald-300 hover:text-emerald-600'
+                      }`}
+                    >
+                      <ThumbsUp className="w-3.5 h-3.5" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => recordFeedback('down')}
+                      aria-label="This answer was not helpful"
+                      title="Not helpful"
+                      className={`thumb-btn p-1.5 rounded-lg border ${
+                        myFeedback && myFeedback.rating === 'down'
+                          ? 'bg-rose-50 border-rose-300 text-rose-600 anim-pop'
+                          : 'bg-white border-slate-200 text-slate-400 hover:border-rose-300 hover:text-rose-600'
+                      }`}
+                    >
+                      <ThumbsDown className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           );
         })}
 
         {isTyping && (
-          <div className="flex items-center gap-2 text-slate-400 text-xs italic p-2">
-            <Bot className="w-4 h-4 text-blue-600 animate-bounce" />
-            <span>Searching approved sources...</span>
+          <div className="flex items-center gap-2.5 p-2 anim-msg">
+            <div className="chat-dots flex items-center gap-1 bg-white border border-slate-200 rounded-full px-3 py-2 shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+            </div>
+            <span className="text-slate-400 text-xs italic">Searching approved sources...</span>
           </div>
         )}
       </div>
@@ -278,7 +338,7 @@ export default function AssistantChat() {
           <button
             type="submit"
             disabled={!inputValue.trim()}
-            className="p-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 text-white rounded-xl transition-all shadow-xs"
+            className="btn-lift p-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 text-white rounded-xl shadow-xs"
           >
             <Send className="w-4 h-4" />
           </button>

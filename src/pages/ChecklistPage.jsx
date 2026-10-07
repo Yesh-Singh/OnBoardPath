@@ -69,7 +69,7 @@ export default function ChecklistPage() {
         <div className="w-full md:w-64 space-y-2">
           <div className="w-full bg-slate-100 rounded-full h-3 overflow-hidden">
             <div
-              className="bg-blue-600 h-3 rounded-full transition-all duration-500 shadow-xs"
+              className="progress-fill bg-blue-600 h-3 rounded-full shadow-xs"
               style={{ width: `${progressMetrics.percentage}%` }}
             />
           </div>
